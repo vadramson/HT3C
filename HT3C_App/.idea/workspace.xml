@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6586e280-7e74-49fb-8c21-5ebb8d3b43e2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/.idea/QuickApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/.idea/QuickApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/.idea/dataSources/59661a04-a47f-4aea-abe9-ef01a1c3e134.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/.idea/dataSources/59661a04-a47f-4aea-abe9-ef01a1c3e134.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/.idea/dataSources/59661a04-a47f-4aea-abe9-ef01a1c3e134/storage.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/.idea/dataSources/59661a04-a47f-4aea-abe9-ef01a1c3e134/storage.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/DRF Auth/Django REST Framework_ Authentication and Permissions – Polyglot.Ninja()_files/sidebar-toggle.js.download" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/DRF Auth/Django REST Framework_ Authentication and Permissions – Polyglot.Ninja()_files/sidebar-toggle.js.download" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/DRF Auth/Django_ Building REST APIs 1 – Polyglot.Ninja()_files/sidebar-toggle.js.download" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/DRF Auth/Django_ Building REST APIs 1 – Polyglot.Ninja()_files/sidebar-toggle.js.download" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/DRF Auth/Django_ Building REST APIs 2 – Polyglot.Ninja()_files/sidebar-toggle.js.download" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/DRF Auth/Django_ Building REST APIs 2 – Polyglot.Ninja()_files/sidebar-toggle.js.download" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/DRF Auth/Django_ Building REST APIs 3 – Polyglot.Ninja()_files/sidebar-toggle.js.download" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/DRF Auth/Django_ Building REST APIs 3 – Polyglot.Ninja()_files/sidebar-toggle.js.download" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/DRF Auth/Django_ Building REST APIs 4 – Polyglot.Ninja()_files/sidebar-toggle.js.download" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/DRF Auth/Django_ Building REST APIs 4 – Polyglot.Ninja()_files/sidebar-toggle.js.download" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/DRF Auth/Django_ Building REST APIs 5 – Polyglot.Ninja()_files/sidebar-toggle.js.download" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/DRF Auth/Django_ Building REST APIs 5 – Polyglot.Ninja()_files/sidebar-toggle.js.download" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/DRF Auth/Django_ Building REST APIs 6 – Polyglot.Ninja()_files/sidebar-toggle.js.download" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/DRF Auth/Django_ Building REST APIs 6 – Polyglot.Ninja()_files/sidebar-toggle.js.download" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/DRF Auth/django-rest-auth-master/docs/make.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/DRF Auth/django-rest-auth-master/docs/make.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/DRF Auth/django_polls_auth/polls/migrations/0003_auto_20171031_1146.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/DRF Auth/django_polls_auth/polls/migrations/0003_auto_20171031_1146.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickApk" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickApk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickApp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickApp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickApp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickApp/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickApp/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickApp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickApp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickApp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickApp/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickApp/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickServe/Working views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickServe/Working views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickServe/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickServe/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickServe/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickServe/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickServe/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickServe/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickServe/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickServe/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickServe/migrations/0002_auto_20170820_0850.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickServe/migrations/0002_auto_20170820_0850.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickServe/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickServe/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickServe/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickServe/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickServe/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/QuickServe/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/templates/homep/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/templates/homep/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickAppWorking Snippets Before Advanced Picture Handling/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/Working views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/Working views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0002_auto_20170820_0850.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0002_auto_20170820_0850.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0003_auto_20170821_1157.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0003_auto_20170821_1157.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0004_remove_purchases_justification.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0004_remove_purchases_justification.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0005_purchases_justification.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0005_purchases_justification.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0006_remove_purchases_justification.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0006_remove_purchases_justification.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0007_auto_20170826_1248.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0007_auto_20170826_1248.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0008_auto_20170826_1937.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0008_auto_20170826_1937.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0009_auto_20170826_1954.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0009_auto_20170826_1954.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0010_orders_tabs.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0010_orders_tabs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0011_remove_orders_tabs.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/migrations/0011_remove_orders_tabs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/images/log/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/images/log/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/src/extraJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/src/extraJS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/src/js/Chart.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/src/js/Chart.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/src/js/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/src/js/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/src/js/reportsData.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/src/js/reportsData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/Chart.js/dist/Chart.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/Chart.js/dist/Chart.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/Chart.js/dist/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/Chart.js/dist/Chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-af-ZA.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-af-ZA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-AE.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-AE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-BH.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-BH.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-DZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-DZ.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-EG.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-EG.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-IQ.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-IQ.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-JO.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-JO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-KW.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-KW.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-LB.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-LB.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-LY.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-LY.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-MA.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-MA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-OM.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-OM.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-QA.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-QA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-SA.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-SA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-SY.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-SY.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-TN.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-TN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-YE.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ar-YE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-az-Cyrl-AZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-az-Cyrl-AZ.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-az-Latn-AZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-az-Latn-AZ.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-be-BY.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-be-BY.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-bg-BG.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-bg-BG.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-bs-Latn-BA.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-bs-Latn-BA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ca-ES.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ca-ES.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-cs-CZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-cs-CZ.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-cy-GB.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-cy-GB.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-da-DK.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-da-DK.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-de-AT.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-de-AT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-de-CH.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-de-CH.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-de-DE.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-de-DE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-de-LI.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-de-LI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-de-LU.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-de-LU.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-dv-MV.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-dv-MV.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-el-GR.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-el-GR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-029.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-029.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-AU.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-AU.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-BZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-BZ.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-CA.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-CA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-GB.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-GB.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-IE.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-IE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-JM.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-JM.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-NZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-NZ.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-PH.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-PH.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-TT.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-TT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-US.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-US.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-ZA.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-ZA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-ZW.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-en-ZW.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-AR.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-AR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-BO.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-BO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-CL.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-CL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-CO.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-CO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-CR.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-CR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-DO.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-DO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-EC.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-EC.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-ES.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-ES.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-GT.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-GT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-HN.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-HN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-MX.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-MX.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-NI.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-NI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-PA.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-PA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-PE.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-PE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-PR.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-PR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-PY.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-PY.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-SV.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-SV.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-UY.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-UY.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-VE.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-es-VE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-et-EE.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-et-EE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-eu-ES.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-eu-ES.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-fa-IR.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-fa-IR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-fi-FI.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-fi-FI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-fo-FO.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-fo-FO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-fr-BE.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-fr-BE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-fr-CA.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-fr-CA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-fr-CH.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-fr-CH.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-fr-FR.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-fr-FR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-fr-LU.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-fr-LU.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-fr-MC.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-fr-MC.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-gl-ES.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-gl-ES.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-gu-IN.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-gu-IN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-he-IL.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-he-IL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-hi-IN.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-hi-IN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-hr-BA.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-hr-BA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-hr-HR.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-hr-HR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-hu-HU.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-hu-HU.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-hy-AM.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-hy-AM.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-id-ID.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-id-ID.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-is-IS.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-is-IS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-it-CH.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-it-CH.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-it-IT.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-it-IT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ja-JP.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ja-JP.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ka-GE.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ka-GE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-kk-KZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-kk-KZ.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-kn-IN.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-kn-IN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ko-KR.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ko-KR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-kok-IN.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-kok-IN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ky-KG.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ky-KG.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-lt-LT.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-lt-LT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-lv-LV.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-lv-LV.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-mi-NZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-mi-NZ.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-mk-MK.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-mk-MK.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-mn-MN.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-mn-MN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-mr-IN.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-mr-IN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ms-BN.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ms-BN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ms-MY.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ms-MY.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-mt-MT.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-mt-MT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-nb-NO.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-nb-NO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-nl-BE.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-nl-BE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-nl-NL.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-nl-NL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-nn-NO.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-nn-NO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ns-ZA.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ns-ZA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-pa-IN.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-pa-IN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-pl-PL.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-pl-PL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-pt-BR.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-pt-BR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-pt-PT.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-pt-PT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-quz-BO.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-quz-BO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-quz-EC.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-quz-EC.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-quz-PE.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-quz-PE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ro-RO.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ro-RO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ru-RU.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ru-RU.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sa-IN.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sa-IN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-se-FI.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-se-FI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-se-NO.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-se-NO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-se-SE.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-se-SE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sk-SK.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sk-SK.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sl-SI.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sl-SI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sma-NO.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sma-NO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sma-SE.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sma-SE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-smj-NO.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-smj-NO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-smj-SE.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-smj-SE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-smn-FI.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-smn-FI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sms-FI.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sms-FI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sq-AL.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sq-AL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sr-Cyrl-BA.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sr-Cyrl-BA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sr-Cyrl-CS.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sr-Cyrl-CS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sr-Latn-BA.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sr-Latn-BA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sr-Latn-CS.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sr-Latn-CS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sv-FI.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sv-FI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sv-SE.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sv-SE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sw-KE.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-sw-KE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-syr-SY.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-syr-SY.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ta-IN.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ta-IN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-te-IN.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-te-IN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-th-TH.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-th-TH.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-tn-ZA.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-tn-ZA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-tr-TR.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-tr-TR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-tt-RU.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-tt-RU.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-uk-UA.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-uk-UA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ur-PK.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-ur-PK.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-uz-Cyrl-UZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-uz-Cyrl-UZ.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-uz-Latn-UZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-uz-Latn-UZ.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-vi-VN.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-vi-VN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-xh-ZA.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-xh-ZA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-zh-CN.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-zh-CN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-zh-HK.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-zh-HK.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-zh-MO.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-zh-MO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-zh-SG.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-zh-SG.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-zh-TW.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-zh-TW.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-zu-ZA.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date-zu-ZA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/build/date.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/src/core/extras.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/src/core/extras.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/src/core/parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/src/core/parser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/src/core/sugarpak.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/DateJS/src/core/sugarpak.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/autosize/changelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/autosize/changelog.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/flot.curvedlines/curvedLines.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/flot.curvedlines/curvedLines.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/gauge.js/assets/jscolor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/gauge.js/assets/jscolor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/gauge.js/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/gauge.js/assets/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/google-code-prettify/README-zh-Hans.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/google-code-prettify/README-zh-Hans.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/google-code-prettify/styles/desert.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/google-code-prettify/styles/desert.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/google-code-prettify/styles/sons-of-obsidian.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/google-code-prettify/styles/sons-of-obsidian.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/index.htm" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/index.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/more_examples/services/service.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/more_examples/services/service.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/more_examples/smartwizard2-ajax.htm" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/more_examples/smartwizard2-ajax.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/more_examples/smartwizard2-validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/more_examples/smartwizard2-validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/smartwizard2-ajax.htm" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/smartwizard2-ajax.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/smartwizard2-multiple.htm" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/smartwizard2-multiple.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/smartwizard2-validation.htm" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/smartwizard2-validation.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/smartwizard2-vertical.htm" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/smartwizard2-vertical.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/styles/demo_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/styles/demo_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/styles/smart_wizard.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/styles/smart_wizard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/styles/smart_wizard_vertical.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jQuery-Smart-Wizard/styles/smart_wizard_vertical.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jquery.tagsinput/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jquery.tagsinput/Gruntfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jquery.tagsinput/grunt-tasks/assets_production.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jquery.tagsinput/grunt-tasks/assets_production.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jquery.tagsinput/grunt-tasks/options/cssmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jquery.tagsinput/grunt-tasks/options/cssmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jquery.tagsinput/grunt-tasks/options/uglify.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jquery.tagsinput/grunt-tasks/options/uglify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jqvmap/grunt/changelog.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jqvmap/grunt/changelog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jqvmap/grunt/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jqvmap/grunt/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jszip/component.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jszip/component.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jszip/docs/APPNOTE.TXT" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/jszip/docs/APPNOTE.TXT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/mocha/media/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/mocha/media/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/parsleyjs/bower_components/mocha/media/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/parsleyjs/bower_components/mocha/media/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/pdfmake/build/pdfmake.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/static/vendors/pdfmake/build/pdfmake.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/QuickServe/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/QuickServe/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/bounc texts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/bounc texts.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/platforms/android/assets/www/build/0.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/platforms/android/assets/www/build/0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/platforms/android/assets/www/build/1.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/platforms/android/assets/www/build/1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/platforms/android/assets/www/build/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/platforms/android/assets/www/build/2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/platforms/android/assets/www/build/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/platforms/android/assets/www/build/3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/platforms/android/assets/www/build/4.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/platforms/android/assets/www/build/4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/platforms/android/assets/www/build/5.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/platforms/android/assets/www/build/5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/platforms/android/assets/www/build/6.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/platforms/android/assets/www/build/6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/platforms/android/assets/www/build/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/platforms/android/assets/www/build/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/platforms/android/assets/www/build/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/platforms/android/assets/www/build/vendor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/platforms/android/cordova/node_modules/.bin/nopt.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/platforms/android/cordova/node_modules/.bin/nopt.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/platforms/android/cordova/node_modules/.bin/semver.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/platforms/android/cordova/node_modules/.bin/semver.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/platforms/android/cordova/node_modules/.bin/shjs.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/platforms/android/cordova/node_modules/.bin/shjs.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/platforms/android/cordova/node_modules/cordova-common/src/CordovaLogger.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/platforms/android/cordova/node_modules/cordova-common/src/CordovaLogger.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/platforms/android/cordova/node_modules/cordova-common/src/PluginManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/platforms/android/cordova/node_modules/cordova-common/src/PluginManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/platforms/android/cordova/node_modules/xmldom/__package__.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/platforms/android/cordova/node_modules/xmldom/__package__.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/requirements2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/requirements2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/requirements3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/requirements3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/templates/homep/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/templates/homep/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../QuickApp/templates/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/templates/messages.html" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="manage.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/manage.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="20" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="859" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="HT3C_App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HT3C_App" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../QuickApp" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="HT3C_App" type="PythonConfigurationType" factoryName="Python">
+      <module name="HT3C_App" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../../../vadrama/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6586e280-7e74-49fb-8c21-5ebb8d3b43e2" name="Default" comment="" />
+      <created>1525110212820</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1525110212820</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-3" y="-1" width="1446" height="903" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24166666" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info active="true" anchor="bottom" id="Event Log" side_tool="true" visible="true" weight="0.32914573" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32998747" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+</project>
