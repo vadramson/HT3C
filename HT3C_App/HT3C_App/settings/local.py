@@ -131,8 +131,12 @@ WSGI_APPLICATION = 'HT3C_App.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ht3c',
+        'USER': 'postgres',
+        'PASSWORD': 'vadson',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 

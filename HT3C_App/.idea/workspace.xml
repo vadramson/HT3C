@@ -2,369 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6586e280-7e74-49fb-8c21-5ebb8d3b43e2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/BaseUser/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/jquery.ui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/animate.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/bootstrap-material-datetimepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/codemirror.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/datatables.bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/dropzone.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/fullcalendar.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/handsontable.full.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/hover.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/_all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/aero.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/aero.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/aero@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/blue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/blue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/blue@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/flat.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/flat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/flat@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/green.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/green@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/grey.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/grey@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/orange.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/orange.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/orange@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/pink.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/pink.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/pink@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/purple.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/purple.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/purple@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/red.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/red.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/red@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/yellow.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/yellow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/flat/yellow@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/futurico/futurico.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/futurico/futurico.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/futurico/futurico@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/line/_all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/line/aero.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/line/blue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/line/green.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/line/grey.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/line/line.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/line/line.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/line/line@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/line/orange.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/line/pink.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/line/purple.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/line/red.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/line/yellow.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/_all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/aero.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/aero.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/aero@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/blue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/blue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/blue@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/green.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/green@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/grey.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/grey@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/minimal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/minimal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/minimal@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/orange.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/orange.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/orange@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/pink.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/pink.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/pink@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/purple.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/purple.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/purple@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/red.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/red.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/red@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/yellow.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/yellow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/minimal/yellow@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/polaris/polaris.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/polaris/polaris.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/polaris/polaris@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/_all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/aero.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/aero.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/aero@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/blue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/blue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/blue@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/green.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/green@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/grey.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/grey@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/orange.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/orange.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/orange@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/pink.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/pink.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/pink@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/purple.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/purple.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/purple@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/red.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/red.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/red@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/square.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/square.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/square@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/yellow.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/yellow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/icheck/skins/square/yellow@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/ionrangeslider/ion.rangeSlider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/ionrangeslider/ion.rangeSlider.skinFlat.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/ionrangeslider/ion.rangeSlider.skinHTML5.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/ionrangeslider/ion.rangeSlider.skinModern.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/ionrangeslider/ion.rangeSlider.skinNice.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/ionrangeslider/ion.rangeSlider.skinSimple.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/ionrangeslider/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/jquery.steps.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/mediaelementplayer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/nouislider.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/select2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/simple-line-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/spinkit.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/summernote.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/plugins/typebase.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/fonts/Simple-Line-Icons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/fonts/Simple-Line-Icons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/fonts/Simple-Line-Icons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/fonts/Simple-Line-Icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/fonts/Simple-Line-Icons.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/404.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/500.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/avatar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/avatar2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/avatar3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/bg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/bg1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/bg2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/bg3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/bg4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/bigplay.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/controls.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/controls.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/demo-video.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/g3986.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/images/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/images/bam.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/left-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/left-bg2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/logomi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/sprite-skin-flat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/sprite-skin-modern.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/sprite-skin-nice.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/sprite-skin-simple.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/ss.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/jquery.ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/bootstrap-material-datetimepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/chart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/clipboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/codemirror.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/datatables.bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/dropzone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flashmediaelement.swf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/ajax/data-eu-gdp-growth-1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/ajax/data-eu-gdp-growth-2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/ajax/data-eu-gdp-growth-3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/ajax/data-eu-gdp-growth-4.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/ajax/data-eu-gdp-growth-5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/ajax/data-eu-gdp-growth.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/ajax/data-japan-gdp-growth.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/ajax/data-usa-gdp-growth.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/ajax/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/annotating/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-interacting/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-multiple/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time-zones/date.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time-zones/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time-zones/tz/africa" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time-zones/tz/antarctica" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time-zones/tz/asia" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time-zones/tz/australasia" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time-zones/tz/backward" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time-zones/tz/etcetera" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time-zones/tz/europe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time-zones/tz/factory" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time-zones/tz/iso3166.tab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time-zones/tz/leapseconds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time-zones/tz/northamerica" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time-zones/tz/pacificnew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time-zones/tz/solar87" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time-zones/tz/solar88" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time-zones/tz/solar89" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time-zones/tz/southamerica" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time-zones/tz/systemv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time-zones/tz/yearistype.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time-zones/tz/zone.tab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/axes-time/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/basic-options/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/basic-usage/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/canvas/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/categories/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/examples.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/image/hs-2004-27-a-large-web.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/image/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/interacting/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/navigate/arrow-down.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/navigate/arrow-left.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/navigate/arrow-right.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/navigate/arrow-up.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/navigate/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/percentiles/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/realtime/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/resize/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/selection/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/series-errorbars/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/series-pie/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/series-toggle/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/series-types/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/shared/jquery-ui/jquery-ui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/shared/jquery-ui/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/stacking/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/symbols/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/threshold/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/tracking/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/visitors/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/examples/zooming/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/excanvas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/excanvas.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.colorhelpers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.colorhelpers.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.canvas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.canvas.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.categories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.categories.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.crosshair.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.crosshair.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.errorbars.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.errorbars.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.fillbetween.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.fillbetween.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.image.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.image.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.navigate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.navigate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.pie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.pie.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.resize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.resize.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.selection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.selection.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.stack.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.stack.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.symbol.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.symbol.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.threshold.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.threshold.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.time.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.flot.time.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/flot/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/fullcalendar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/handsontable.full.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/holder.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/html5shiv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/icheck.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/ie9.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/imagesloaded.pkgd.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/ion.rangeSlider.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/jquery.datatables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/jquery.flot.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/jquery.knob.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/jquery.mask.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/jquery.mobile-1.4.5.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/jquery.nicescroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/jquery.sparkline.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/jquery.steps.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/jquery.vmap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/jquery.vmap.sampledata.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/jquery.vmap.world.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/maps/continents/jquery.vmap.africa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/maps/continents/jquery.vmap.asia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/maps/continents/jquery.vmap.australia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/maps/continents/jquery.vmap.europe.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/maps/continents/jquery.vmap.north-america.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/maps/continents/jquery.vmap.south-america.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/maps/continents/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/maps/jquery.vmap.algeria.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/maps/jquery.vmap.argentina.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/maps/jquery.vmap.brazil.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/maps/jquery.vmap.europe.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/maps/jquery.vmap.france.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/maps/jquery.vmap.germany.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/maps/jquery.vmap.greece.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/maps/jquery.vmap.iran.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/maps/jquery.vmap.iraq.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/maps/jquery.vmap.russia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/maps/jquery.vmap.usa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/maps/jquery.vmap.world.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/masonry.pkgd.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/mediaelement-and-player.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/moment.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/morris.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/nouislider.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/raphael.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/respond.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/select2.full.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/silverlightmediaelement.xap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/js/plugins/summernote.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/media/demo.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/static/asset/media/demo.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseUser/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HT3C_App/settings/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HT3C_App/settings/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HT3C_App/settings/local.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HT3C_App/settings/production.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HT3C_App/settings_old.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HT3C_App/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/HT3C_App/settings before config of Local and live .py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HT3C_App/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/HT3C_App/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Administration/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Administration/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseUser/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BaseUser/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HT3C_App/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/HT3C_App/settings/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HT3C_App/settings/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/HT3C_App/settings/local.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HT3C_App/settings/production.py" beforeDir="false" afterPath="$PROJECT_DIR$/HT3C_App/settings/production.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../QuickApp/.idea/QuickApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/.idea/QuickApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../QuickApp/.idea/dataSources/59661a04-a47f-4aea-abe9-ef01a1c3e134.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/.idea/dataSources/59661a04-a47f-4aea-abe9-ef01a1c3e134.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../QuickApp/.idea/dataSources/59661a04-a47f-4aea-abe9-ef01a1c3e134/storage.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/.idea/dataSources/59661a04-a47f-4aea-abe9-ef01a1c3e134/storage.xml" afterDir="false" />
@@ -652,8 +294,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../QuickApp/QuickApp/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2220">
-              <caret line="168" column="21" selection-start-line="168" selection-start-column="21" selection-end-line="168" selection-end-column="21" />
+            <state relative-caret-position="2100">
+              <caret line="160" column="1" lean-forward="true" selection-start-line="160" selection-start-column="1" selection-end-line="160" selection-end-column="1" />
               <folding>
                 <element signature="e#312#321#0" expanded="true" />
                 <element signature="e#1919#1990#0" />
@@ -664,11 +306,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HT3C_App/settings/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+            <state relative-caret-position="90">
+              <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -679,8 +321,8 @@
       <file leaf-file-name="local.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HT3C_App/settings/local.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+            <state relative-caret-position="501">
+              <caret line="138" column="23" lean-forward="true" selection-start-line="137" selection-start-column="8" selection-end-line="138" selection-end-column="23" />
               <folding>
                 <element signature="e#309#318#0" expanded="true" />
                 <element signature="e#1956#2027#0" />
@@ -693,8 +335,8 @@
       <file leaf-file-name="production.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HT3C_App/settings/production.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="20" />
+            <state relative-caret-position="91">
+              <caret line="138" column="23" lean-forward="true" selection-start-line="138" selection-start-column="23" selection-end-line="138" selection-end-column="23" />
               <folding>
                 <element signature="e#309#318#0" expanded="true" />
                 <element signature="e#1956#2027#0" />
@@ -713,29 +355,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../QuickApp/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3765">
-              <caret line="251" column="67" selection-start-line="250" selection-start-column="35" selection-end-line="251" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../QuickApp/templates/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HT3C_App/settings/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+            <state relative-caret-position="91">
+              <caret line="133" column="21" selection-start-line="133" selection-start-column="17" selection-end-line="133" selection-end-column="21" />
               <folding>
                 <element signature="e#309#318#0" expanded="true" />
               </folding>
@@ -743,11 +367,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BaseUser/models.py">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Administration/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="588">
+              <caret line="76" column="76" selection-start-line="76" selection-start-column="76" selection-end-line="76" selection-end-column="76" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../QuickApp/QuickServe/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="184" column="76" lean-forward="true" selection-start-line="184" selection-start-column="19" selection-end-line="184" selection-end-column="76" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -761,6 +400,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BaseUser/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="618">
+              <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -769,6 +420,11 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Deci</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -783,10 +439,11 @@
         <option value="$PROJECT_DIR$/../../../QuickApp/QuickApp/settings.py" />
         <option value="$PROJECT_DIR$/HT3C_App/settings/__init__.py" />
         <option value="$PROJECT_DIR$/templates/login.html" />
-        <option value="$PROJECT_DIR$/HT3C_App/settings/base.py" />
-        <option value="$PROJECT_DIR$/HT3C_App/settings/local.py" />
-        <option value="$PROJECT_DIR$/HT3C_App/settings/production.py" />
+        <option value="$PROJECT_DIR$/Administration/models.py" />
         <option value="$PROJECT_DIR$/BaseUser/models.py" />
+        <option value="$PROJECT_DIR$/HT3C_App/settings/production.py" />
+        <option value="$PROJECT_DIR$/HT3C_App/settings/local.py" />
+        <option value="$PROJECT_DIR$/HT3C_App/settings/base.py" />
       </list>
     </option>
   </component>
@@ -814,6 +471,11 @@
             <path>
               <item name="HT3C_App" type="b2602c69:ProjectViewProjectNode" />
               <item name="HT3C_App" type="462c0819:PsiDirectoryNode" />
+              <item name="Administration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HT3C_App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HT3C_App" type="462c0819:PsiDirectoryNode" />
               <item name="BaseUser" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -826,6 +488,20 @@
               <item name="HT3C_App" type="462c0819:PsiDirectoryNode" />
               <item name="HT3C_App" type="462c0819:PsiDirectoryNode" />
               <item name="settings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HT3C_App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HT3C_App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickApp" type="462c0819:PsiDirectoryNode" />
+              <item name="QuickApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HT3C_App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickApp" type="462c0819:PsiDirectoryNode" />
+              <item name="QuickServe" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -903,10 +579,11 @@
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16584334" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32988358" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50069445" side_tool="true" weight="0.32858992" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5010586" side_tool="true" weight="0.5808538" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32988358" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49930555" weight="0.32858992" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32988358" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31047866" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49894142" weight="0.5808538" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32988358" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -917,7 +594,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -1188,29 +864,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../QuickApp/QuickApp/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2220">
-          <caret line="168" column="21" selection-start-line="168" selection-start-column="21" selection-end-line="168" selection-end-column="21" />
-          <folding>
-            <element signature="e#312#321#0" expanded="true" />
-            <element signature="e#1919#1990#0" />
-            <element signature="e#2021#2180#0" />
-            <element signature="e#2267#2575#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HT3C_App/settings/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../QuickApp/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1239,10 +892,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../../QuickApp/QuickServe/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="184" column="76" lean-forward="true" selection-start-line="184" selection-start-column="19" selection-end-line="184" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Administration/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="76" column="76" selection-start-line="76" selection-start-column="76" selection-end-line="76" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseUser/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HT3C_App/settings/local.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+        <state relative-caret-position="501">
+          <caret line="138" column="23" lean-forward="true" selection-start-line="137" selection-start-column="8" selection-end-line="138" selection-end-column="23" />
           <folding>
             <element signature="e#309#318#0" expanded="true" />
             <element signature="e#1956#2027#0" />
@@ -1251,10 +934,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../../QuickApp/QuickApp/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2100">
+          <caret line="160" column="1" lean-forward="true" selection-start-line="160" selection-start-column="1" selection-end-line="160" selection-end-column="1" />
+          <folding>
+            <element signature="e#312#321#0" expanded="true" />
+            <element signature="e#1919#1990#0" />
+            <element signature="e#2021#2180#0" />
+            <element signature="e#2267#2575#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HT3C_App/settings/production.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="20" />
+        <state relative-caret-position="91">
+          <caret line="138" column="23" lean-forward="true" selection-start-line="138" selection-start-column="23" selection-end-line="138" selection-end-column="23" />
           <folding>
             <element signature="e#309#318#0" expanded="true" />
             <element signature="e#1956#2027#0" />
@@ -1265,18 +961,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HT3C_App/settings/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+        <state relative-caret-position="91">
+          <caret line="133" column="21" selection-start-line="133" selection-start-column="17" selection-end-line="133" selection-end-column="21" />
           <folding>
             <element signature="e#309#318#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BaseUser/models.py">
+    <entry file="file://$PROJECT_DIR$/HT3C_App/settings/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="90">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
