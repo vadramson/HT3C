@@ -38,7 +38,7 @@ class Student(models.Model):
     role = models.PositiveSmallIntegerField(choices=ROLES, blank=True, null=True)
 
     def __str__(self):  # __unicode__ for Python 2
-        return self.user
+        return self.user.username
 
 
 @receiver(post_save, sender=User)

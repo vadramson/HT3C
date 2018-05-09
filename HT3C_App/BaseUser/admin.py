@@ -3,7 +3,7 @@ from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import User
 
 # Register your models here.
-from BaseUser.models import Student
+from BaseUser.models import Student, StudentLevel, StudentCourse
 
 
 class StudentInline(admin.StackedInline):
@@ -15,7 +15,9 @@ class StudentInline(admin.StackedInline):
 
 class CustomUserAdmin(UserAdmin):
     inlines = (StudentInline,)
-    list_display = ('username', 'email', 'first_name', 'last_name', 'is_staff', 'get_role', 'get_birth_date', 'get_departmet', 'get_birth_place')
+    list_display = (
+    'username', 'email', 'first_name', 'last_name', 'is_staff', 'get_role', 'get_birth_date', 'get_departmet',
+    'get_birth_place')
     list_select_related = ('student',)
 
     def get_departmet(self, instance):
@@ -44,5 +46,22 @@ class CustomUserAdmin(UserAdmin):
         return super(CustomUserAdmin, self).get_inline_instances(request, obj)
 
 
+class StudentCourseAdmin(admin.ModelAdmin):
+    list_display = ('student', 'course', 'dateReg')
+    list_filter = [
+        'course'
+    ]
+
+
+class StudentLevelCourseAdmin(admin.ModelAdmin):
+    list_display = ('user', 'name_level', 'code_level')
+    list_filter = [
+        'name_level'
+    ]
+
+
 admin.site.unregister(User)
 admin.site.register(User, CustomUserAdmin)
+
+admin.site.register(StudentLevel, StudentLevelCourseAdmin)
+admin.site.register(StudentCourse, StudentCourseAdmin)

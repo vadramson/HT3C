@@ -15,9 +15,6 @@ class AcademicYear(models.Model):
     accStart = models.DateField(unique=True, blank=False, null=False)
     accEnd = models.DateField(unique=True, blank=False, null=False)
 
-    def __str__(self):
-        return self.accStart
-
 
 class Semester(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -77,3 +74,6 @@ class Marks(models.Model):
     score = models.DecimalField(max_digits=25, decimal_places=2, blank=True)
     course = models.ForeignKey(Courses, on_delete=models.CASCADE, related_name='Course', verbose_name='Course')
     exam = models.ForeignKey(Exam, on_delete=models.CASCADE, related_name='Exam_Score', verbose_name='Exam Score')
+
+    def __str__(self):
+        return self.score
