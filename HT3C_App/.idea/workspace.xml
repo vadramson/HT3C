@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6586e280-7e74-49fb-8c21-5ebb8d3b43e2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Database/Database Cridentials" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Administration/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Administration/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Administration/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Administration/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseUser/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/BaseUser/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseUser/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BaseUser/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/base_site.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base_site.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../QuickApp/.idea/QuickApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/.idea/QuickApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../QuickApp/.idea/dataSources/59661a04-a47f-4aea-abe9-ef01a1c3e134.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/.idea/dataSources/59661a04-a47f-4aea-abe9-ef01a1c3e134.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../QuickApp/.idea/dataSources/59661a04-a47f-4aea-abe9-ef01a1c3e134/storage.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/.idea/dataSources/59661a04-a47f-4aea-abe9-ef01a1c3e134/storage.xml" afterDir="false" />
@@ -309,8 +301,8 @@
       <file leaf-file-name="base_site.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/admin/base_site.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+            <state relative-caret-position="135">
+              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
               </folding>
@@ -942,8 +934,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/base_site.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        <state relative-caret-position="135">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
           </folding>
