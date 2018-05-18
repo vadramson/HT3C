@@ -51,7 +51,7 @@ class ContinuousAssessment(models.Model):
 
 
 class Courses(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     course = models.CharField(blank=True, null=True, max_length=255)
     credit = models.CharField(blank=True, null=True, max_length=255)
     code = models.CharField(blank=True, null=True, max_length=255)

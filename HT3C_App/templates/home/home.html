@@ -1,0 +1,169 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block content %}
+
+
+{% if pwd_updated == 'Password Updated' %}
+<div class="col-md-12">
+    <div class="alert alert-info col-md-12 col-sm-12  alert-icon alert-dismissible fade in" role="alert">
+        <div class="col-md-2 col-sm-2 icon-wrapper text-center">
+            <span class="fa fa-check fa-2x"></span></div>
+        <div class="col-md-10 col-sm-10">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <p><strong>Success!</strong> Password Updated Successfully.</p>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<div class="col-md-4">
+    <div class="panel box-v1">
+        <div class="panel-heading bg-white border-none">
+            <div class="col-md-6 col-sm-6 col-xs-6 text-left padding-0">
+                <h4 class="text-left">
+                    {% if user.student.role == 1 %}
+                    Administration
+                    {% elif user.student.role == 2 %}
+                    Teacher
+                    {% elif user.student.role == 3 %}
+                    Student
+                    {% endif %}
+                </h4>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                <h4>
+                    <span class="icon-graduation icons icon text-right"></span>
+                </h4>
+            </div>
+        </div>
+        <div class="panel-body text-center">
+            {% if user.student.picture.url == NULL %}
+            <img src="{% static 'asset/img/avatar.jpg' %}" class="img-responsive" data-placement="bottom" title="{{ user.get_full_name|default:user.username }}" alt="{{ user.get_full_name|default:user.username }}" data-toggle="tolltip" />
+            {% else %}
+            <img src="{{ user.student.picture.url }}" class="img-responsive" alt="{{ user.username }}" title="{{ user.get_full_name|default:user.username }}" data-toggle="tooltip" />
+            {% endif %}
+
+            <h1 class="label label-info" style="font-size: 20px;">
+                <span>{{ user.get_full_name|default:user.username }}</span>
+            </h1>
+            <hr>
+            <div class="col-md-12 col-sm-12 col-xs-12 text-left padding-0">
+                <h4 class="text-left">
+                    Contacts
+                </h4>
+            </div>
+            <br/>
+             <hr>
+            <h5>
+                <span style="float: left; color: skyblue;"> <strong><i class="fa fa-phone"></i></strong></span> {{ user.student.phone }}
+            </h5>
+            <hr>
+            <h5>
+                <span style="float: left; color: skyblue;"> <strong><i class="fa fa-envelope"></i></strong></span> {{ user.email }}
+            </h5>
+             <hr>
+             <h5>
+                <span style="float: left; color: skyblue;"> <strong><i class="icon-location-pin"></i></strong></span> {{ user.student.address }}
+            </h5>
+        </div>
+    </div>
+</div>
+<div class="col-md-8">
+    <div class="panel box-v1">
+        <div class="panel-heading bg-white border-none">
+            <div class="col-md-6 col-sm-6 col-xs-6 text-left padding-0">
+                <h4 class="text-left">Other Information</h4>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                <h4>
+                    <span class="icon-options-vertical icons icon text-right"></span>
+                </h4>
+            </div>
+        </div>
+        <div class="panel-body text-center">
+            <div class="col-md-12 col-sm-12 col-xs-12 text-left padding-0">
+                <h4 class="text-left" style="color: blue;">
+                    <i class=" icon-layers"></i> Summary
+                </h4>
+            </div>
+            <hr/>
+            <table>
+                <tr>
+                    <td><b>Foreign Status :</b></td>
+                    <td>Admitted as {{ user.student.nationality }}</td>
+                </tr>
+                 <tr>
+                    <td><b>Admission Date :</b></td>
+                    <td>{{ user.date_joined }}</td>
+                </tr>
+            </table>
+           <div class="col-md-12 col-sm-12 col-xs-12 text-left padding-0">
+                <h4 class="text-left" style="color: blue;">
+                    <i class="icon-folder"></i> Basic Information
+                </h4>
+            </div>
+            <table style="text-align: left;">
+                <tr>
+                    <td><b>Name :</b></td>
+                    <td>{{ user.get_full_name }}</td>
+                </tr>
+                 <tr>
+                    <td><b>Degree Program :</b></td>
+                    <td>{{ user.student.degree_programm }}</td>
+                </tr>
+                 <tr>
+                    <td><b>Matriculation No :</b></td>
+                    <td>{{ user.student.matriculation }}</td>
+                </tr>
+                <tr>
+                    <td><b>Gender:</b></td>
+                    <td>
+                        {% if user.student.gender == 4%}
+                        <i class="icon-user" data-toggle="tooltip" data-placement="bottom" title="Male"></i>
+                        {% elif user.student.gender == 5%}
+                        <i class="icon-user-female" data-toggle="tooltip" data-placement="bottom" title="Female"></i>
+                        {% endif%}
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Date of Birth :</b></td>
+                    <td>{{ user.student.birthDate }}</td>
+                </tr>
+                <tr>
+                    <td><b>Place of Birth :</b></td>
+                    <td>{{ user.student.birthPlace }}</td>
+                </tr>
+                 <tr>
+                    <td><b>Region of Origin :</b></td>
+                    <td>{{ user.student.region }}</td>
+                </tr>
+                 <tr>
+                    <td><b>Marital Status :</b></td>
+                   <td>
+                        {% if user.student.marital_status == 6 %}
+                        <i data-toggle="tooltip" data-placement="bottom" title="Single"></i> Single
+                        {% elif user.student.marital_status == 7%}
+                        <i  data-toggle="tooltip" data-placement="bottom" title="Married"></i> Married
+                        {% endif%}
+                    </td>
+                </tr>
+                 <tr>
+                    <td><b>NID/Passport No.</b></td>
+                    <td>{{ user.student.id_number }}</td>
+                </tr>
+            </table>
+            <div class="col-md-12 col-sm-12 col-xs-12 text-left padding-0">
+                <h4 class="text-left" style="color: blue;">
+                    <i class="icon-call-out"></i> Contact Person
+                </h4>
+            </div>
+            <table>
+                <tr>
+                    <td><b>Address of contact person:</b></td>
+                    <td>{{ user.student.contact_person_address }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

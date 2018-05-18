@@ -4,7 +4,6 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils import timezone
 
-
 # Create your models here.
 from Administration.models import Courses, Department
 
@@ -23,19 +22,35 @@ class Student(models.Model):
     TEACHER = 2
     STUDENT = 3
 
+    MALE = 4
+    FEMALE = 5
+
+    MARRIED = 6
+    SINGLE = 7
+
     ROLES = ((ADMIN, 'Admin'), (TEACHER, 'Teacher'), (STUDENT, 'Student'))
+    GENDER = ((MALE, 'Male'), (FEMALE, 'Femaile'))
+    MARITAL_STATUS = ((MARRIED, 'Married'), (SINGLE, 'Single'))
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    level = models.ForeignKey(StudentLevel, on_delete=models.CASCADE, related_name='Student_level')
+    level = models.ForeignKey(StudentLevel, on_delete=models.CASCADE, related_name='Student_level', null=True, blank=True)
     department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='Student_Department',
-                                   verbose_name='Student Department')
-    phone = models.CharField(max_length=254, unique=True, blank=True)
-    address = models.CharField(max_length=254, blank=True)
-    matriculation = models.CharField(max_length=254, unique=True, blank=True)
-    picture = models.ImageField(null=True, upload_to="%Y/%m/%d")
+                                   verbose_name='Student Department', blank=True, null=True)
+    phone = models.CharField(max_length=254, unique=True, blank=True, null=True)
+    address = models.CharField(max_length=254, blank=True, null=True)
+    matriculation = models.CharField(max_length=254, unique=True, blank=True, null=True)
+    picture = models.ImageField(null=True, upload_to="%Y/%m/%d", blank=True)
     birthDate = models.DateField(blank=True, null=True)
-    birthPlace = models.CharField(max_length=254, blank=True)
+    birthPlace = models.CharField(max_length=254, blank=True, null=True)
+    nationality = models.CharField(max_length=254, blank=True, null=True)
+    contact_person_address = models.CharField(max_length=254, blank=True, null=True, verbose_name='contact person '
+                                                                                                  'address ')
+    degree_programm = models.CharField(max_length=254, blank=True, null=True)
+    id_number = models.IntegerField(unique=True, verbose_name='ID Card Number', null=True, blank=True)
+    region = models.CharField(max_length=254, blank=True, verbose_name='Region of Origin', null=True)
     role = models.PositiveSmallIntegerField(choices=ROLES, blank=True, null=True)
+    gender = models.PositiveSmallIntegerField(choices=GENDER, blank=True, null=True)
+    marital_status = models.PositiveSmallIntegerField(choices=MARITAL_STATUS, blank=True, null=True)
 
     def __str__(self):  # __unicode__ for Python 2
         return self.user.username
@@ -49,7 +64,8 @@ def update_user_profile(sender, instance, created, **kwargs):
 
 
 class StudentCourse(models.Model):
-    student = models.OneToOneField(User, on_delete=models.CASCADE, related_name='Student_Course', verbose_name="student")
+    student = models.OneToOneField(User, on_delete=models.CASCADE, related_name='Student_Course',
+                                   verbose_name="student")
     course = models.ForeignKey(Courses, on_delete=models.CASCADE, related_name='Student_Course',
                                verbose_name='Student Course')
     dateReg = models.DateTimeField(default=timezone.now)

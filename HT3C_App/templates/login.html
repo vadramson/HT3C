@@ -36,7 +36,9 @@
 
       <div class="container">
 
-        <form class="form-signin">
+        <form class="form-signin" method="post">
+          {% csrf_token %}
+          <input type="hidden" name="next" value="{{ next }}" />
           <div class="panel periodic-login">
               <span class="atomic-number"></span>
               <div class="panel-body text-center">
@@ -46,24 +48,27 @@
                   <p class="element-name">Sign In</p>
                   <i class="icons icon-arrow-down"></i>
                   <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                    <input type="text" class="form-text" required>
+                    <input type="text" name="username" class="form-text" required>
                     <span class="bar"></span>
                     <label>Username</label>
                   </div>
                   <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                    <input type="password" class="form-text" required>
+                    <input name="password" type="password" class="form-text" required>
                     <span class="bar"></span>
                     <label>Password</label>
                   </div>
+                    {% if form.help_text %}#}
+                        <p><small style="color: grey">{{ form.help_text }}</small></p>
+                    {% endif %}
                   <label class="pull-left">
                   <input type="checkbox" class="icheck pull-left" name="checkbox1"/> Remember me
                   </label>
                   <input type="submit" class="btn col-md-12" value="SignIn"/>
               </div>
-                <div class="text-center" style="padding:5px;">
-                    <a href="forgotpass.html">Forgot Password </a>
-                    <a href="reg.html">| Signup</a>
-                </div>
+                <!--<div class="text-center" style="padding:5px;">-->
+                    <!--<a href="forgotpass.html">Forgot Password </a>-->
+                    <!--<a href="reg.html">| Signup</a>-->
+                <!--</div>-->
           </div>
         </form>
 
