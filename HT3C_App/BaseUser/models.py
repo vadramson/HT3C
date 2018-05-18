@@ -9,7 +9,7 @@ from Administration.models import Courses, Department
 
 
 class StudentLevel(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     name_level = models.CharField(max_length=255, null=True, blank=True, verbose_name='Level')
     code_level = models.CharField(max_length=255, null=True, blank=True, verbose_name='Code')
 
@@ -33,7 +33,8 @@ class Student(models.Model):
     MARITAL_STATUS = ((MARRIED, 'Married'), (SINGLE, 'Single'))
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    level = models.ForeignKey(StudentLevel, on_delete=models.CASCADE, related_name='Student_level', null=True, blank=True)
+    level = models.ForeignKey(StudentLevel, on_delete=models.CASCADE, related_name='Student_level', null=True,
+                              blank=True)
     department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='Student_Department',
                                    verbose_name='Student Department', blank=True, null=True)
     phone = models.CharField(max_length=254, unique=True, blank=True, null=True)
@@ -64,7 +65,7 @@ def update_user_profile(sender, instance, created, **kwargs):
 
 
 class StudentCourse(models.Model):
-    student = models.OneToOneField(User, on_delete=models.CASCADE, related_name='Student_Course',
+    student = models.ForeignKey(User, on_delete=models.CASCADE, related_name='Student_Course',
                                    verbose_name="student")
     course = models.ForeignKey(Courses, on_delete=models.CASCADE, related_name='Student_Course',
                                verbose_name='Student Course')
@@ -72,3 +73,12 @@ class StudentCourse(models.Model):
 
     def __str__(self):  # __unicode__ for Python 2
         return self.course
+
+
+class TeacherCourses(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    course = models.ForeignKey(Courses, on_delete=models.CASCADE)
+    levele = models.ForeignKey(StudentLevel, on_delete=models.CASCADE, verbose_name='Level')
+
+    def __str__(self):
+        return self.user

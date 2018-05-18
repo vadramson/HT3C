@@ -10,14 +10,15 @@ from django.utils.translation import ugettext as _
 
 # Create your models here.
 
+
 class AcademicYear(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     accStart = models.DateField(unique=True, blank=False, null=False)
     accEnd = models.DateField(unique=True, blank=False, null=False)
 
 
 class Semester(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     academic_year = models.ForeignKey(AcademicYear, on_delete=models.CASCADE, related_name='School_Year',
                                       verbose_name='Academic Year')
     semStart = models.DateField(unique=True, blank=False, null=False)
@@ -29,7 +30,7 @@ class Semester(models.Model):
 
 
 class Department(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='Author')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='Author')
     department_name = models.CharField(unique=True, blank=False, null=False, max_length=255)
     description = models.CharField(unique=True, blank=False, null=False, max_length=255)
     address = models.CharField(unique=True, blank=False, null=False, max_length=255)
@@ -40,7 +41,7 @@ class Department(models.Model):
 
 
 class ContinuousAssessment(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='Semester', verbose_name='Semester')
     dateStart = models.DateField(unique=True, blank=False, null=False)
     dateEnd = models.DateField(unique=True, blank=False, null=False)
@@ -61,7 +62,7 @@ class Courses(models.Model):
 
 
 class Exam(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='Semester_Exam',
                                  verbose_name='Semester Exam')
     examStart = models.DateField(unique=True, blank=False, null=False)
@@ -69,7 +70,7 @@ class Exam(models.Model):
 
 
 class Marks(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     student = models.ForeignKey(User, on_delete=models.CASCADE, related_name='Student', verbose_name='Student')
     score = models.DecimalField(max_digits=25, decimal_places=2, blank=True)
     course = models.ForeignKey(Courses, on_delete=models.CASCADE, related_name='Course', verbose_name='Course')

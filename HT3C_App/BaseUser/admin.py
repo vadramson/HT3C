@@ -3,7 +3,7 @@ from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import User
 
 # Register your models here.
-from BaseUser.models import Student, StudentLevel, StudentCourse
+from BaseUser.models import Student, StudentLevel, StudentCourse, TeacherCourses
 
 
 class StudentInline(admin.StackedInline):
@@ -60,8 +60,16 @@ class StudentLevelCourseAdmin(admin.ModelAdmin):
     ]
 
 
+class TeacherCoursesAdmin(admin.ModelAdmin):
+    list_display = ('user', 'course', 'levele')
+    list_filter = [
+        'course'
+    ]
+
+
 admin.site.unregister(User)
 admin.site.register(User, CustomUserAdmin)
 
 admin.site.register(StudentLevel, StudentLevelCourseAdmin)
 admin.site.register(StudentCourse, StudentCourseAdmin)
+admin.site.register(TeacherCourses, TeacherCoursesAdmin)
