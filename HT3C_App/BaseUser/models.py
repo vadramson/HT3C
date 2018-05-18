@@ -54,7 +54,8 @@ class Student(models.Model):
     marital_status = models.PositiveSmallIntegerField(choices=MARITAL_STATUS, blank=True, null=True)
 
     def __str__(self):  # __unicode__ for Python 2
-        return self.user.username
+        # return self.user.get_full_name
+        return self.user.last_name
 
 
 @receiver(post_save, sender=User)
@@ -79,6 +80,3 @@ class TeacherCourses(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     course = models.ForeignKey(Courses, on_delete=models.CASCADE)
     levele = models.ForeignKey(StudentLevel, on_delete=models.CASCADE, verbose_name='Level')
-
-    def __str__(self):
-        return self.user

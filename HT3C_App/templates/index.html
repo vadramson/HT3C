@@ -111,6 +111,7 @@
                           {% endif %}
                       </ul>
                     </li>
+
                     <li class="ripple">
                       <a class="tree-toggle nav-header">
                         <span class="fa-diamond fa"></span> Layout
@@ -203,7 +204,7 @@
                         </li>
                       </ul>
                     </li>
-                    <li><a href="credits.html">Credits</a></li>
+                    <li><a href="credits.html">Credits</a></li> -->
                   </ul>
                 </div>
             </div>
@@ -230,14 +231,16 @@
         <div class="mimin-mobile-menu-list">
             <div class="col-md-12 sub-mimin-mobile-menu-list animated fadeInLeft">
                 <ul class="nav nav-list">
-                    <li class="active ripple">
-                      <a class="tree-toggle nav-header">
-                        <span class="fa-home fa"></span>Dashboard 
+                   <li class="active ripple">
+                      <a class="tree-toggle nav-header"><span class="fa-home fa"></span> Dashboard
                         <span class="fa-angle-right fa right-arrow text-right"></span>
                       </a>
                       <ul class="nav nav-list tree">
-                          <li><a href="{% url 'home' %}">My Profile</a></li>
-                          <li><a href="dashboard-v2.html">Change Password</a></li>
+                          <li><a href="{% url 'home' %}"> <i class="fa fa-user"></i> My Profile</a></li>
+                          <li><a href="{% url 'change_password' %}"><i class="fa fa-lock"></i> Change Password</a></li>
+                          {% if user.student.role == 1 %}
+                          <li><a href="admin/"><i class="icon-user-following"></i> Go to Admin</a></li>
+                          {% endif %}
                       </ul>
                     </li>
                     <li class="ripple">
@@ -356,6 +359,7 @@
                       </ul>
                     </li>
                     <li><a href="credits.html">Credits</a></li>
+                    -->
                   </ul>
             </div>
         </div>       
