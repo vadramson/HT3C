@@ -20,6 +20,7 @@ class CustomUserAdmin(UserAdmin):
     'get_birth_place')
     list_select_related = ('student',)
 
+
     def get_departmet(self, instance):
         return instance.student.department
 
@@ -44,6 +45,7 @@ class CustomUserAdmin(UserAdmin):
         if not obj:
             return list()
         return super(CustomUserAdmin, self).get_inline_instances(request, obj)
+
 
 
 class StudentCourseAdmin(admin.ModelAdmin):

@@ -1,5 +1,6 @@
 import random
 import string
+import datetime
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
@@ -15,6 +16,12 @@ class AcademicYear(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     accStart = models.DateField(unique=True, blank=False, null=False)
     accEnd = models.DateField(unique=True, blank=False, null=False)
+
+    def __str__(self):
+        st = str(self.accStart)
+        ed = str(self.accEnd)
+        sl = ' / '
+        return st+sl+ed
 
 
 class Semester(models.Model):

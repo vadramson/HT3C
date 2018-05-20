@@ -1,0 +1,57 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block content %}
+
+
+<div class="col-md-12">
+    <div class="panel box-v1">
+        <div class="panel-heading bg-white border-none">
+            <div class="col-md-6 col-sm-6 col-xs-6 text-left padding-0">
+                <h1 class="text-left" style="text-align: center; color: blue;">
+                    Course Registration
+                </h1>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                <h4>
+                    <span class="icon-book-open icons icon text-right"></span>
+                </h4>
+            </div>
+        </div>
+        <div class="panel-body text-center">
+
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="panel box-v1">
+        <div class="panel-heading bg-white border-none">
+            <div class="col-md-6 col-sm-6 col-xs-6 text-left padding-0">
+                <h4 class="text-left">Other Information</h4>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                <h4>
+                    <span class="icon-options-vertical icons icon text-right"></span>
+                </h4>
+            </div>
+        </div>
+        <div class="panel-body text-center">
+            <h1>
+                Degree Program: <b>{{user.student.degree_programm}}</b>
+            </h1>
+            <br>
+            <h2>
+                Matriculation No.: <b>{{user.student.matriculation}}</b>
+            </h2>
+            <br>
+            <h2>
+                Academic Year: <b>{{user.student.academic_year.accStart|date:'Y'}}/{{user.student.academic_year.accEnd|date:'Y'}}</b>
+            </h2>
+            <br>
+            <h2>
+                Semester: <b>{% for semester in sem %}{{semester.semester}}{% endfor  %}</b>
+                <!--Semester: <b>{{sem.semester}}</b>-->
+            </h2>
+        </div>
+    </div>
+</div>
+{% endblock %}

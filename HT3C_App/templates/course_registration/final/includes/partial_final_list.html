@@ -1,0 +1,15 @@
+{% for reg in register_courses %}
+  <tr>
+    <td>{{ forloop.counter }}</td>
+    <td>{{ reg.course.code }}</td>
+    <td>{{ reg.course.course }}</td>
+    <td>{{ reg.course.credit }}</td>
+    <td>{{ reg.dateReg }}</td>
+  </tr>
+{##}
+{#{% empty %}#}
+{#  <tr>#}
+{#    <td colspan="8" class="text-center bg-warning">No electives Yet!</td>#}
+{# </tr>#}
+
+{% endfor %}

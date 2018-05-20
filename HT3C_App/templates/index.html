@@ -18,7 +18,7 @@
             {% elif user.student.role == 3 %}
                 Student
             {% endif %}
-            {{ user.username }}
+            {{ user.get_full_name }}
     </title>
  
     <!-- start: Css -->
@@ -29,7 +29,10 @@
       <link rel="stylesheet" type="text/css" href="{% static 'asset/css/plugins/simple-line-icons.css' %}"/>
       <link rel="stylesheet" type="text/css" href="{% static 'asset/css/plugins/animate.min.css' %}"/>
       <link rel="stylesheet" type="text/css" href="{% static 'asset/css/plugins/fullcalendar.min.css' %}"/>
-	<link href="{% static 'asset/css/style.css' %}" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="{% static 'asset/css/plugins/datatables.bootstrap.min.css' %}"/>
+      <link rel="stylesheet" type="text/css" href="{% static 'asset/alerts/sweetalert.css' %}" >
+      <link rel="stylesheet" type="text/css" href="{% static 'google/google.css' %}" >
+	  <link href="{% static 'asset/css/style.css' %}" rel="stylesheet">
 	<!-- end: Css -->
 
 	<link rel="shortcut icon" href="{% static 'asset/img/logomi.png' %}">
@@ -111,17 +114,22 @@
                           {% endif %}
                       </ul>
                     </li>
-
-                    <li class="ripple">
+                    {% if user.student.role == 3 %}
+                      <li class="ripple">
                       <a class="tree-toggle nav-header">
-                        <span class="fa-diamond fa"></span> Layout
+                        <span class="fa-diamond fa"></span> Course Registration
                         <span class="fa-angle-right fa right-arrow text-right"></span>
                       </a>
                       <ul class="nav nav-list tree">
-                        <li><a href="topnav.html">Top Navigation</a></li>
-                        <li><a href="boxed.html">Boxed</a></li>
+                        <li><a href="{% url 'course_reg_home' %}">Information</a></li>
+                        <li><a href="{% url 'major_reg_course_list' %}">Register Major Courses</a></li>
+                        <li><a href="{% url 'minor_reg_course_list' %}">Register Minor Courses</a></li>
+                        <li><a href="{% url 'elective_reg_course_list' %}">Register Elective Courses</a></li>
+                        <li><a href="{% url 'required_reg_course_list' %}">Register Required Courses</a></li>
+                        <li><a href="{% url 'final_reg_course_list' %}">Final Register Courses</a></li>
                       </ul>
                     </li>
+                    {% endif %}
                     <li class="ripple">
                       <a class="tree-toggle nav-header">
                         <span class="fa-area-chart fa"></span> Charts
@@ -373,7 +381,14 @@
     <script src="{% static 'asset/js/jquery.min.js' %}"></script>
     <script src="{% static 'asset/js/jquery.ui.min.js' %}"></script>
     <script src="{% static 'asset/js/bootstrap.min.js' %}"></script>
-   
+
+      <!-- Page action Scripts Start -->
+      <script src="{% static 'asset/js/major.js' %}"></script>
+      <script src="{% static 'asset/js/minor.js' %}"></script>
+      <script src="{% static 'asset/js/elective.js' %}"></script>
+      <script src="{% static 'asset/js/required.js' %}"></script>
+      <!-- Page action Scripts End -->
+
     
     <!-- plugins -->
     <script src="{% static 'asset/js/plugins/moment.min.js' %}"></script>
@@ -383,6 +398,12 @@
     <script src="{% static 'asset/js/plugins/maps/jquery.vmap.world.js' %}"></script>
     <script src="{% static 'asset/js/plugins/jquery.vmap.sampledata.js' %}"></script>
     <script src="{% static 'asset/js/plugins/chart.min.js' %}"></script>
+    <script src="{% static 'asset/alerts/sweetalert.min.js' %}"></script>
+
+    <!-- plugins -->
+
+    <script src="{% static 'asset/js/plugins/jquery.datatables.min.js' %}"></script>
+    <script src="{% static 'asset/js/plugins/datatables.bootstrap.min.js' %}"></script>
 
 
     <!-- custom -->
@@ -661,6 +682,11 @@
 
       })(jQuery);
      </script>
+      <script type="text/javascript">
+  $(document).ready(function(){
+    $('#datatables-example').DataTable();
+  });
+</script>
   <!-- end: Javascript -->
   </body>
 </html>

@@ -1,0 +1,13 @@
+
+{% load widget_tweaks %}
+
+
+<div class="form-group{% if field.errors %} has-error{% endif %}">
+    <!--<label>course</label>-->
+    <label for="{{ course }}">Select Course</label>
+    {{ form.course|attr:"name :course"|attr:"placeholder : Select course"|attr:"class : form-control"|attr:"id :course"|attr:"required:required" }}
+    <p class="help-block">{{ form.course.errors }}</p>
+    <input type="hidden" name="student" value="{{user.id}}">
+    <input type="hidden" name="type_course" value="Elective">
+</div>
+

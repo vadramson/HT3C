@@ -5,7 +5,7 @@ from django.dispatch import receiver
 from django.utils import timezone
 
 # Create your models here.
-from Administration.models import Courses, Department
+from Administration.models import Courses, Department, AcademicYear
 
 
 class StudentLevel(models.Model):
@@ -37,6 +37,8 @@ class Student(models.Model):
                               blank=True)
     department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='Student_Department',
                                    verbose_name='Student Department', blank=True, null=True)
+    academic_year = models.ForeignKey(AcademicYear, on_delete=models.CASCADE, related_name='Academic_year',
+                                      verbose_name='Academic Year', blank=True, null=True)
     phone = models.CharField(max_length=254, unique=True, blank=True, null=True)
     address = models.CharField(max_length=254, blank=True, null=True)
     matriculation = models.CharField(max_length=254, unique=True, blank=True, null=True)
@@ -67,10 +69,11 @@ def update_user_profile(sender, instance, created, **kwargs):
 
 class StudentCourse(models.Model):
     student = models.ForeignKey(User, on_delete=models.CASCADE, related_name='Student_Course',
-                                   verbose_name="student")
+                                verbose_name="student", null=True, blank=True)
     course = models.ForeignKey(Courses, on_delete=models.CASCADE, related_name='Student_Course',
-                               verbose_name='Student Course')
+                               verbose_name='Student Course', null=True, blank=True)
     dateReg = models.DateTimeField(default=timezone.now)
+    type_course = models.CharField(max_length=35, null=True, blank=True)
 
     def __str__(self):  # __unicode__ for Python 2
         return self.course
