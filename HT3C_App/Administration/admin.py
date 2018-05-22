@@ -29,16 +29,18 @@ class SemesterAdmin(admin.ModelAdmin):
 
 
 class ContinuousAssessmentAdmin(admin.ModelAdmin):
-    list_display = ('user', 'semester', 'dateStart', 'dateEnd', 'ca')
+    list_display = ('user', 'semester', 'dateStart', 'dateEnd', 'ca', 'status')
     list_filter = [
-        'ca'
+        'ca',
+        'status'
     ]
 
 
 class ExamAdmin(admin.ModelAdmin):
-    list_display = ('user', 'semester', 'examStart', 'examEnd')
+    list_display = ('user', 'semester', 'examStart', 'examEnd', 'exam', 'status')
     list_filter = [
-        'examStart'
+        'examStart',
+        'status'
     ]
 
 

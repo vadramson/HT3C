@@ -1,3 +1,5 @@
+from builtins import print
+
 from django.contrib import messages
 import datetime
 from django.contrib.auth.decorators import login_required
@@ -26,9 +28,9 @@ from rest_framework.status import HTTP_401_UNAUTHORIZED
 from rest_framework.authtoken.models import Token
 
 # Create your views here.
-from Administration.models import Semester
+from Administration.models import Semester, ContinuousAssessment, Exam, Marks, Courses
 from BaseUser.forms import PasswordChgForm, StudentCourseForm
-from BaseUser.models import StudentCourse
+from BaseUser.models import StudentCourse, TeacherCourses
 
 
 @login_required
@@ -334,3 +336,125 @@ def required_delete(request, pk):
 def final_reg_course_list(request):
     register_courses = StudentCourse.objects.all().filter(student=request.user).order_by('-id')
     return render(request, 'course_registration/final/final_list.html', {"register_courses": register_courses})
+
+
+# MY COURSES
+
+@login_required
+def my_courses_list(request):
+    courses = TeacherCourses.objects.all().filter(user=request.user).order_by('-id')
+    return render(request, 'my_courses/myCourses_list.html', {"courses": courses})
+
+
+@login_required
+def fill_marks(request, pk):
+    global test_marks_list
+    if request.method == 'POST':
+        ex = request.POST.get('exam')
+        c = request.POST.get('ca')
+        fat_1 = ''
+        if c == '' and ex != '':
+            fat_1 = ''
+        if c != '' and ex == '':
+            fat_1 = ''
+        if c != '' and ex != '':
+            fat_1 = 'Both Filled'
+        if c == '' and ex == '':
+            fat_1 = 'Both Empty'
+
+        if fat_1 == '':
+            courses = get_object_or_404(TeacherCourses, pk=pk)
+            course = courses.course
+            stus = StudentCourse.objects.all().filter(course=course).order_by('id')
+            print('Post Received')
+            ct = stus.count()
+            print(ct)
+            course_id = request.POST.get('course_id')
+            score_list = request.POST.getlist('score')
+            student_list = request.POST.getlist('student')
+            print('First score List')
+            print(score_list)
+            print('First student List')
+            print(student_list)
+            stu_scr = zip(score_list, student_list)
+            st = []
+            mrk_list = []
+            for scores, stdts in stu_scr:
+                type_score = ''
+                mark = Marks()
+                if scores == '':
+                    scores = 0
+                score = scores
+                # print(score)
+                sts = stdts
+                # print(sts)
+                student = get_object_or_404(User, pk=sts)
+                crse = get_object_or_404(Courses, pk=course_id)
+                if ex != '':
+                    exam = get_object_or_404(Exam, pk=request.POST.get('exam'))
+                    mark.exam = exam
+                    type_score = 'exam'
+                if c != '':
+                    ca = get_object_or_404(ContinuousAssessment, pk=request.POST.get('ca'))
+                    mark.ca = ca
+                    type_score = 'ca'
+                mark.student = student
+                mark.score = scores
+                mark.course = crse
+                mark.user = request.user
+                if type_score == 'exam':
+                    test_marks_list = Marks.objects.all().filter(
+                        ((Q(student=mark.student) & Q(course=mark.course)) & Q(exam=mark.exam)))
+                if type_score == 'ca':
+                        test_marks_list = Marks.objects.all().filter(
+                        ((Q(student=mark.student) & Q(course=mark.course)) & Q(ca=mark.ca)))
+                if test_marks_list.exists():
+                    print('Exists')
+                    test_marks = list(test_marks_list)
+                else:
+                    mark.save()
+                print('mrks cores are ')
+                # print(st)
+                continue
+            fatal = 'None'
+            result_list = []
+            if c != '':
+                result = Marks.objects.all().filter(Q(course=course) & Q(ca=c)).order_by('id')
+                result_list = list(result)
+            if ex != '':
+                result = Marks.objects.all().filter(Q(course=course) & Q(exam=ex)).order_by('id')
+                result_list = list(result)
+            crse = get_object_or_404(TeacherCourses, pk=pk)
+            return render(request, 'my_courses/success_registration.html',
+                          {"fatal": fatal, "result_list": result_list, "crse": crse})
+        else:
+            fatal = 'Occurred'
+            print('Fatal Occurred')
+            courses = get_object_or_404(TeacherCourses, pk=pk)
+            course = courses.course
+            possible_ca = ContinuousAssessment.objects.all().filter(status=1).order_by('-id')
+            possible_exam = Exam.objects.all().filter(status=1).order_by('-id')
+            stus = StudentCourse.objects.all().filter(course=course).order_by('id')
+            return render(request, 'my_courses/register_marks.html',
+                          {"courses": courses, "stus": stus, "possible_ca": possible_ca,
+                           "possible_exam": possible_exam, "fatal": fatal})
+
+    else:
+        courses = get_object_or_404(TeacherCourses, pk=pk)
+        course = courses.course
+        print(course)
+        possible_ca = ContinuousAssessment.objects.all().filter(status=1).order_by('-id')
+        possible_exam = Exam.objects.all().filter(status=1).order_by('-id')
+        stus = StudentCourse.objects.all().filter(course=course).order_by('id')
+        return render(request, 'my_courses/register_marks.html',
+                      {"courses": courses, "stus": stus, "possible_ca": possible_ca, "possible_exam": possible_exam})
+
+
+@login_required
+def results_marks(request, pk):
+    courses = get_object_or_404(TeacherCourses, pk=pk)
+    course = courses.course
+    result = Marks.objects.all().filter(Q(course=course) & Q(user=request.user)).order_by('-id')
+    result_list = list(result)
+    crse = get_object_or_404(TeacherCourses, pk=pk)
+    return render(request, 'my_courses/results_marks.html', {"result_list": result_list, "crse": crse})

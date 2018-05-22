@@ -64,6 +64,7 @@ class StudentLevelCourseAdmin(admin.ModelAdmin):
 
 class TeacherCoursesAdmin(admin.ModelAdmin):
     list_display = ('user', 'course', 'levele')
+    list_search = 'user'
     list_filter = [
         'course'
     ]

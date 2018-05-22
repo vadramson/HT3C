@@ -21,7 +21,7 @@ class AcademicYear(models.Model):
         st = str(self.accStart)
         ed = str(self.accEnd)
         sl = ' / '
-        return st+sl+ed
+        return st + sl + ed
 
 
 class Semester(models.Model):
@@ -33,7 +33,9 @@ class Semester(models.Model):
     semester = models.CharField(blank=False, null=False, max_length=255)
 
     def __str__(self):
-        return self.semester
+        academic_year = str(self.academic_year)
+        of = ' OF '
+        return self.semester + of + academic_year
 
 
 class Department(models.Model):
@@ -47,15 +49,24 @@ class Department(models.Model):
         return self.department_name
 
 
+OPEN = 1
+CLOSED = 0
+
+CA_STATUS = ((OPEN, 'Open'), (CLOSED, 'Closed'))
+
+
 class ContinuousAssessment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='Semester', verbose_name='Semester')
     dateStart = models.DateField(unique=True, blank=False, null=False)
     dateEnd = models.DateField(unique=True, blank=False, null=False)
-    ca = models.CharField(blank=True, null=True, max_length=3)
+    ca = models.CharField(max_length=255)
+    status = models.PositiveSmallIntegerField(choices=CA_STATUS, verbose_name='CA Status')
 
     def __str__(self):
-        return self.ca
+        sem = str(self.semester)
+        spa = ' - '
+        return self.ca + spa + sem
 
 
 class Courses(models.Model):
@@ -68,20 +79,42 @@ class Courses(models.Model):
         return self.course
 
 
+OPEN = 1
+CLOSED = 0
+
+EXAM_STATUS = ((OPEN, 'Open'), (CLOSED, 'Closed'))
+
+
 class Exam(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='Semester_Exam',
                                  verbose_name='Semester Exam')
     examStart = models.DateField(unique=True, blank=False, null=False)
     examEnd = models.DateField(unique=True, blank=False, null=False)
+    exam = models.CharField(max_length=255)
+    status = models.PositiveSmallIntegerField(choices=EXAM_STATUS, verbose_name='Exam Status')
+
+    def __str__(self):
+        sem = str(self.semester)
+        spa = ' - '
+        return self.exam + spa + sem
 
 
 class Marks(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Lecturer/Teacher')
     student = models.ForeignKey(User, on_delete=models.CASCADE, related_name='Student', verbose_name='Student')
-    score = models.DecimalField(max_digits=25, decimal_places=2, blank=True)
+    score = models.DecimalField(max_digits=25, decimal_places=2, blank=True, null=True)
     course = models.ForeignKey(Courses, on_delete=models.CASCADE, related_name='Course', verbose_name='Course')
-    exam = models.ForeignKey(Exam, on_delete=models.CASCADE, related_name='Exam_Score', verbose_name='Exam Score')
+    exam = models.ForeignKey(Exam, on_delete=models.CASCADE, related_name='Exam_Score', verbose_name='Exam Score',
+                             blank=True, null=True)
+    ca = models.ForeignKey(ContinuousAssessment, on_delete=models.CASCADE, related_name='CA_Score',
+                           verbose_name='CA Score', blank=True, null=True)
 
     def __str__(self):
-        return self.score
+        stu = str(self.student)
+        crs = str(self.course)
+        scr = str(self.score)
+        exa = str(self.exam)
+        ca = str(self.ca)
+        spa = ' - '
+        return stu+spa+crs+spa+scr+spa+exa+spa+ca
