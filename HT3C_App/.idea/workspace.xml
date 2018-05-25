@@ -2,25 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6586e280-7e74-49fb-8c21-5ebb8d3b43e2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/my_courses/includes/partial_major_create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/my_courses/includes/partial_major_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/my_courses/includes/partial_major_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/my_courses/includes/partial_major_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/my_courses/includes/partial_my_course_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/my_courses/includes/partial_my_student_course_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/my_courses/myCourses_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/my_courses/register_marks.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/my_courses/results_marks.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/my_courses/success_registration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Pro/Africashine/.idea/new_sos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Pro/Africashine/.idea/new_sos.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Pro/Africashine/Bank/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Pro/Africashine/Bank/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Pro/Africashine/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Pro/Africashine/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Pro/Africashine/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Pro/Africashine/templates/users_Super/users_Donor_Admin_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Pro/Africashine/templates/users_Super/users_Donor_Admin_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/HT3C_App.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HT3C_App.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Administration/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Administration/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Administration/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Administration/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseUser/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/BaseUser/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseUser/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BaseUser/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseUser/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BaseUser/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Credentials" beforeDir="false" afterPath="$PROJECT_DIR$/Credentials" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HT3C_App/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/HT3C_App/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../QuickApp/.idea/QuickApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/.idea/QuickApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../QuickApp/.idea/dataSources/59661a04-a47f-4aea-abe9-ef01a1c3e134.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/.idea/dataSources/59661a04-a47f-4aea-abe9-ef01a1c3e134.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../QuickApp/.idea/dataSources/59661a04-a47f-4aea-abe9-ef01a1c3e134/storage.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/.idea/dataSources/59661a04-a47f-4aea-abe9-ef01a1c3e134/storage.xml" afterDir="false" />
@@ -305,78 +297,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HT3C_App/urls.py">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../../Pro/ZbarCode/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+            <state relative-caret-position="148">
+              <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
               <folding>
-                <element signature="e#632#664#0" expanded="true" />
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BaseUser/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="83" column="8" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register_marks.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/my_courses/register_marks.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="102" selection-start-line="20" selection-start-column="102" selection-end-line="20" selection-end-column="102" />
-              <folding>
-                <element signature="e#470#477#1" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myCourses_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/my_courses/myCourses_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="partial_my_course_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/my_courses/includes/partial_my_course_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-              <folding>
-                <element signature="e#519#525#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="results_marks.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/my_courses/results_marks.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -384,31 +312,19 @@
       <file leaf-file-name="Credentials" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Credentials">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="81" selection-start-line="17" selection-start-column="81" selection-end-line="17" selection-end-column="81" />
+            <state relative-caret-position="390">
+              <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BaseUser/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
-              <caret line="411" column="35" lean-forward="true" selection-start-line="411" selection-start-column="35" selection-end-line="411" selection-end-column="35" />
+            <state relative-caret-position="16">
+              <caret line="411" column="35" selection-start-line="411" selection-start-column="35" selection-end-line="411" selection-end-column="35" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Administration/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="107" column="8" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -419,8 +335,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -449,9 +365,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/HT3C_App/settings/base.py" />
-        <option value="$PROJECT_DIR$/Database/Database Cridentials" />
-        <option value="$PROJECT_DIR$/templates/admin/base_site.html" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/templates/home/change_password.html" />
         <option value="$PROJECT_DIR$/templates/home/home.html" />
@@ -500,6 +413,9 @@
         <option value="$PROJECT_DIR$/Credentials" />
         <option value="$PROJECT_DIR$/templates/my_courses/myCourses_list.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/../../../../Pro/Africashine/Bank/models.py" />
+        <option value="$PROJECT_DIR$/../../../../Pro/Africashine/templates/users_Super/users_Donor_Admin_list.html" />
+        <option value="$PROJECT_DIR$/../../../../Pro/ZbarCode/main.py" />
       </list>
     </option>
   </component>
@@ -516,7 +432,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -527,72 +442,19 @@
             <path>
               <item name="HT3C_App" type="b2602c69:ProjectViewProjectNode" />
               <item name="HT3C_App" type="462c0819:PsiDirectoryNode" />
-              <item name="Administration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HT3C_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HT3C_App" type="462c0819:PsiDirectoryNode" />
               <item name="BaseUser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HT3C_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HT3C_App" type="462c0819:PsiDirectoryNode" />
-              <item name="Database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HT3C_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HT3C_App" type="462c0819:PsiDirectoryNode" />
-              <item name="HT3C_App" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HT3C_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HT3C_App" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HT3C_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HT3C_App" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="course_registration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HT3C_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HT3C_App" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HT3C_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HT3C_App" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="my_courses" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HT3C_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HT3C_App" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="my_courses" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HT3C_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickApp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HT3C_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickApp" type="462c0819:PsiDirectoryNode" />
-              <item name="QuickServe" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../QuickApp" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Pro/Africashine/manage.py" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.buildout.BuildoutModulesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -620,7 +482,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.HT3C_App">
     <configuration name="HT3C_App" type="PythonConfigurationType" factoryName="Python">
       <module name="HT3C_App" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -639,6 +501,52 @@
       <option name="EMULATE_TERMINAL" value="true" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ZbarCode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../../Pro/ZbarCode" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../../Pro/ZbarCode/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="new_sos" type="PythonConfigurationType" factoryName="Python">
+      <module name="new_sos" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../../../africashine/africashinevnv/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../../Pro/Africashine" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.HT3C_App" />
+      <item itemvalue="Python.new_sos" />
+      <item itemvalue="Python.main" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -657,16 +565,16 @@
     <frame x="-3" y="20" width="1446" height="883" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22582921" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22582921" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32988358" />
-      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.50247" side_tool="true" weight="0.66401064" />
-      <window_info anchor="bottom" id="Run" order="10" sideWeight="0.49752998" weight="0.66401064" />
+      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.50035286" side_tool="true" weight="0.8685259" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49930555" weight="0.32858992" />
-      <window_info anchor="bottom" id="Python Console" order="8" weight="0.32988358" />
+      <window_info anchor="bottom" id="Python Console" order="8" sideWeight="0.49964714" weight="0.32934928" />
+      <window_info anchor="bottom" id="Run" order="10" sideWeight="0.49752998" weight="0.66401064" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.8685259" />
-      <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49964714" weight="0.8685259" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -711,38 +619,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BaseUser/static/asset/alerts/sweetalert.min.js">
+    <entry file="file://$PROJECT_DIR$/../../../../Pro/ZbarCode/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../QuickApp/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="331" column="31" selection-start-line="331" selection-start-column="31" selection-end-line="331" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../QuickApp/QuickServe/static/src/js/order.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../vadrama/lib/python3.6/site-packages/django/template/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="909" selection-start-line="909" selection-end-line="909" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../QuickApp/QuickServe/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="17" />
+        <state relative-caret-position="720">
+          <caret line="48" column="38" lean-forward="true" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -972,9 +855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="39" column="71" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -982,11 +862,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="594" column="12" lean-forward="true" selection-start-line="594" selection-start-column="12" selection-end-line="594" selection-end-column="34" />
-          <folding>
-            <element signature="e#17769#18391#0" />
-            <element signature="e#18442#18638#0" />
-            <element signature="e#18693#18968#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -994,9 +869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#div#1;n#div#0;n#form#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1004,51 +876,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="478">
           <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
-          <folding>
-            <element signature="e#469#476#1" expanded="true" />
-            <element signature="n#style#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HT3C_App/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-          <folding>
-            <element signature="e#632#664#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BaseUser/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
+        <state relative-caret-position="1140">
           <caret line="83" column="8" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Administration/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
+        <state relative-caret-position="1485">
           <caret line="107" column="8" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseUser/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="411" column="35" lean-forward="true" selection-start-line="411" selection-start-column="35" selection-end-line="411" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1056,10 +897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="102" selection-start-line="20" selection-start-column="102" selection-end-line="20" selection-end-column="102" />
-          <folding>
-            <element signature="e#470#477#1" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1070,20 +907,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Credentials">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="81" selection-start-line="17" selection-start-column="81" selection-end-line="17" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/my_courses/includes/partial_my_course_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-          <folding>
-            <element signature="e#519#525#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1096,8 +923,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
+        <state relative-caret-position="15">
+          <caret line="148" selection-start-line="148" selection-end-line="148" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HT3C_App/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../Pro/Africashine/new sos alert credentials.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../Pro/Africashine/Bank/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1959">
+          <caret line="193" column="31" lean-forward="true" selection-start-line="193" selection-start-column="31" selection-end-line="193" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../Pro/Africashine/templates/users_Super/users_Donor_Admin_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../Pro/ZbarCode/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Credentials">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseUser/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="411" column="35" selection-start-line="411" selection-start-column="35" selection-end-line="411" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

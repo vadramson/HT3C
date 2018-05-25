@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/HT3C_App.iml" filepath="$PROJECT_DIR$/.idea/HT3C_App.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../../QuickApp/.idea/QuickApp.iml" filepath="$PROJECT_DIR$/../../../QuickApp/.idea/QuickApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../Pro/ZbarCode/.idea/ZbarCode.iml" filepath="$PROJECT_DIR$/../../../../Pro/ZbarCode/.idea/ZbarCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../Pro/Africashine/.idea/new_sos.iml" filepath="$PROJECT_DIR$/../../../../Pro/Africashine/.idea/new_sos.iml" />
     </modules>
   </component>
 </project>
