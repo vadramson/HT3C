@@ -100,6 +100,27 @@ class Exam(models.Model):
         return self.exam + spa + sem
 
 
+OPEN = 1
+CLOSED = 0
+
+RESIT_STATUS = ((OPEN, 'Open'), (CLOSED, 'Closed'))
+
+
+class Resit(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='Semester_Resit',
+                                 verbose_name='Semester Resit')
+    resit_start = models.DateField(unique=True, blank=False, null=False)
+    resit_end = models.DateField(unique=True, blank=False, null=False)
+    resit = models.CharField(max_length=255)
+    status = models.PositiveSmallIntegerField(choices=RESIT_STATUS, verbose_name='Resit Status')
+
+    def __str__(self):
+        sem = str(self.semester)
+        spa = ' - '
+        return self.resit + spa + sem
+
+
 class Marks(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Lecturer/Teacher')
     student = models.ForeignKey(User, on_delete=models.CASCADE, related_name='Student', verbose_name='Student')
@@ -117,4 +138,4 @@ class Marks(models.Model):
         exa = str(self.exam)
         ca = str(self.ca)
         spa = ' - '
-        return stu+spa+crs+spa+scr+spa+exa+spa+ca
+        return stu + spa + crs + spa + scr + spa + exa + spa + ca
