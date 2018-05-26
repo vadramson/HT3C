@@ -129,6 +129,18 @@
                         <li><a href="{% url 'final_reg_course_list' %}">Final Register Courses</a></li>
                       </ul>
                     </li>
+                    <li class="ripple">
+                      <a class="tree-toggle nav-header">
+                        <span class="fa fa-book"></span> My Results
+                        <span class="fa-angle-right fa right-arrow text-right"></span>
+                      </a>
+                      <ul class="nav nav-list tree">
+                        <li><a href="{% url 'ca_results_home' %}">CA Results</a></li>
+                        <li><a href="{% url 'exam_results_home' %}">Exam Results</a></li>
+                        <li><a href="{% url 'minor_reg_course_list' %}">Final Results</a></li>
+                        <li><a href="{% url 'elective_reg_course_list' %}">Transcripts</a></li>
+                      </ul>
+                    </li>
                     {% endif %}
                     {% if user.student.role == 2 %}
                     <li><a href="{% url 'my_courses_list' %}"><span class="icon icon-notebook"></span>My Courses</a></li>

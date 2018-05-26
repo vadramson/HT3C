@@ -406,7 +406,7 @@ def fill_marks(request, pk):
                     test_marks_list = Marks.objects.all().filter(
                         ((Q(student=mark.student) & Q(course=mark.course)) & Q(exam=mark.exam)))
                 if type_score == 'ca':
-                        test_marks_list = Marks.objects.all().filter(
+                    test_marks_list = Marks.objects.all().filter(
                         ((Q(student=mark.student) & Q(course=mark.course)) & Q(ca=mark.ca)))
                 if test_marks_list.exists():
                     print('Exists')
@@ -458,3 +458,39 @@ def results_marks(request, pk):
     result_list = list(result)
     crse = get_object_or_404(TeacherCourses, pk=pk)
     return render(request, 'my_courses/results_marks.html', {"result_list": result_list, "crse": crse})
+
+
+# MY RESULTS
+
+@login_required
+def ca_results_home(request):
+    if request.method == 'POST':
+        ca = request.POST.get('ca')
+        result = Marks.objects.all().filter(Q(student=request.user) & Q(ca=ca)).order_by('id')
+        cas = ContinuousAssessment.objects.all().order_by('-id')
+        result_list = list(result)
+        if result.exists():
+            query_outcome = 'Results Found'
+        else:
+            query_outcome = 'No Results'
+        return render(request, 'my_results/ca_results.html', {"query_outcome": query_outcome, "result_list": result_list, "cas": cas})
+    else:
+        cas = ContinuousAssessment.objects.all().order_by('-id')
+        return render(request, 'my_results/ca_results.html', {"cas": cas})
+
+
+@login_required
+def exam_results_home(request):
+    if request.method == 'POST':
+        exam = request.POST.get('exam')
+        result = Marks.objects.all().filter(Q(student=request.user) & Q(exam=exam)).order_by('id')
+        exams = Exam.objects.all().order_by('-id')
+        result_list = list(result)
+        if result.exists():
+            query_outcome = 'Results Found'
+        else:
+            query_outcome = 'No Results'
+        return render(request, 'my_results/exam_results.html', {"query_outcome": query_outcome, "result_list": result_list, "exams": exams})
+    else:
+        exams = Exam.objects.all().order_by('-id')
+        return render(request, 'my_results/exam_results.html', {"exams": exams})

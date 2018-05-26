@@ -1,0 +1,30 @@
+{% for my_course in courses %}
+  <tr>
+    <td>{{ forloop.counter }}</td>
+    <td>{{ my_course.course.code }}</td>
+    <td>{{ my_course.course.course }}</td>
+    <td>{{ my_course.course.credit }}</td>
+    <td>{{ my_course.levele }}</td>
+    <td >
+      <a type="button"
+              class="btn btn-primary btn-xs"
+              href="{% url 'fill_marks' my_course.id %}"
+              data-toggle="tooltip" data-placement="top" title="Enter Marks (CA / Exam)">
+        <span class="fa fa-send"></span>
+      </a>
+      &nbsp;
+      <a type="button"
+              class="btn btn-success btn-xs"
+              href="{% url 'results_marks' my_course.id %}"
+              data-toggle="tooltip" data-placement="top" title="Consults Marks">
+        <span class="fa fa-search"></span>
+      </a>
+    </td>
+  </tr>
+{##}
+{#{% empty %}#}
+{#  <tr>#}
+{#    <td colspan="8" class="text-center bg-warning">No Majors Yet!</td>#}
+{# </tr>#}
+
+{% endfor %}

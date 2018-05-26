@@ -1,0 +1,22 @@
+<style>
+    .boy{font-family: "Adobe Caslon Pro";
+         font-size: 25px;
+         color: #4cae4c;}
+</style>
+<form method="post" action="{% url 'major_create' %}" class="js-major-create-form">
+  {% csrf_token %}
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title">Register New Major Course</h4>
+  </div>
+  <div class="modal-body">
+    {% include 'course_registration/major/includes/partial_major_form.html' %}
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <button type="submit" class="btn btn-primary">Register Course</button>
+  </div>
+</form>
+
