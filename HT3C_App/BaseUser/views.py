@@ -393,11 +393,14 @@ def fill_marks(request, pk):
                 if ex != '':
                     exam = get_object_or_404(Exam, pk=request.POST.get('exam'))
                     mark.exam = exam
+                    mark.semester = exam.semester
                     type_score = 'exam'
                 if c != '':
                     ca = get_object_or_404(ContinuousAssessment, pk=request.POST.get('ca'))
                     mark.ca = ca
+                    mark.semester = ca.semester
                     type_score = 'ca'
+                    # average =
                 mark.student = student
                 mark.score = scores
                 mark.course = crse
@@ -473,7 +476,8 @@ def ca_results_home(request):
             query_outcome = 'Results Found'
         else:
             query_outcome = 'No Results'
-        return render(request, 'my_results/ca_results.html', {"query_outcome": query_outcome, "result_list": result_list, "cas": cas})
+        return render(request, 'my_results/ca_results.html',
+                      {"query_outcome": query_outcome, "result_list": result_list, "cas": cas})
     else:
         cas = ContinuousAssessment.objects.all().order_by('-id')
         return render(request, 'my_results/ca_results.html', {"cas": cas})
@@ -490,7 +494,55 @@ def exam_results_home(request):
             query_outcome = 'Results Found'
         else:
             query_outcome = 'No Results'
-        return render(request, 'my_results/exam_results.html', {"query_outcome": query_outcome, "result_list": result_list, "exams": exams})
+        return render(request, 'my_results/exam_results.html',
+                      {"query_outcome": query_outcome, "result_list": result_list, "exams": exams})
     else:
         exams = Exam.objects.all().order_by('-id')
         return render(request, 'my_results/exam_results.html', {"exams": exams})
+
+
+@login_required
+def final_results_home(request):
+    # return render(request, 'my_results/final_results.html')
+
+    if request.method == 'POST':
+        semester = request.POST.get('semester')
+        result = Marks.objects.all().filter(Q(student=request.user) & Q(semester=semester)).order_by('id')
+        rst_ca = Marks.objects.filter(Q(student=request.user) & Q(semester=semester) & Q(semester=semester) & Q(exam=None)).values('course', 'score')
+        rst_exam = Marks.objects.filter(Q(student=request.user) & Q(semester=semester) & Q(semester=semester) & Q(ca=None)).values('course', 'score')
+        stud = request.user
+        str(stud)
+        sem = semester
+        ex = None
+        # av_ca_marks = Marks.objects.raw(" SELECT AVERAGE(score) AS mrks FROM Administration_marks WHERE student = %s AND semester = %s AND exam = %s " [std, sem, ex])
+        # total = rst_ca.aggregate(total=Avg('score'))
+        exams = Exam.objects.all().order_by('-id')
+        semesters = Semester.objects.all().order_by('-id')
+        result_list = list(result)
+        result_exam = list(rst_exam)
+        result_ca = list(rst_ca)
+        if result.exists():
+            query_outcome = 'Results Found'
+            # print(result_list)
+            # print(result_exam)
+            print(rst_ca)
+            # print(rst_exam.query)
+            trp = {}
+            for mk in result_ca:
+                # print(mk)
+                trp = mk
+                print(trp)
+                # lst_mk = list(mk)
+                # print('')
+                # print(lst_mk)
+            print('tuple next')
+            print('')
+            print(trp.course)
+        else:
+            query_outcome = 'No Results'
+        return render(request, 'my_results/final_results.html',
+                      {"query_outcome": query_outcome, "result_list": result_list, "exams": exams, "semesters": semesters})
+    else:
+        exams = Exam.objects.all().order_by('-id')
+        semesters = Semester.objects.all().order_by('-id')
+        return render(request, 'my_results/final_results.html', {"exams": exams, "semesters": semesters})

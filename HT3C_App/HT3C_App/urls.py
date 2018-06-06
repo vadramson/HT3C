@@ -43,6 +43,7 @@ urlpatterns = [
     url(r'^final/course/registered/$', urs_views.final_reg_course_list, name='final_reg_course_list'),
     url(r'^my/results/CA/$', urs_views.ca_results_home, name='ca_results_home'),
     url(r'^my/results/EXAMS/$', urs_views.exam_results_home, name='exam_results_home'),
+    url(r'^my/final/results/$', urs_views.final_results_home, name='final_results_home'),
     url(r'^my/course/$', urs_views.my_courses_list, name='my_courses_list'),
     url(r'^register/marks/(?P<pk>\d+)/$', urs_views.fill_marks, name='fill_marks'),
     url(r'^results/marks/(?P<pk>\d+)/$', urs_views.results_marks, name='results_marks'),
