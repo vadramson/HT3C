@@ -1,0 +1,69 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% load mathfilters %}
+{% block content %}
+<style>
+    table th {font-family: "Adobe Caslon Pro";
+         font-size: 15px;
+         padding: 1px;
+         }
+
+    table td {font-family: "Adobe Caslon Pro";
+     font-size: 15px;
+
+     }
+</style>
+
+<div class="col-md-12">
+      {% if msg == 'Invalid Code' %}
+      <div class="alert alert-danger alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <h4><i class="icon fa fa-close"></i> Error !</h4>
+        Invalid Code Entered or the code has Expired.
+      </div>
+    {% endif %}
+
+    <div class="panel box-v1">
+        <div class="panel-heading bg-white border-none">
+            <div class="col-md-11 col-sm-11 col-xs-11 text-left padding-0">
+                <div class="text-left" style="text-align: center; color: blue;">
+                    <h3> Transcript services payment </h3>
+                </div>
+            </div>
+            <div class="col-md-1 col-sm-1 col-xs-1 text-right">
+                <h4>
+                    <span class="icon-book-open icons icon text-right"></span>
+                </h4>
+            </div>
+        </div>
+        <div class="panel-body text-center">
+
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="panel">
+        <div class="panel-heading"><h3>Enter the 4-Digits codee you just received.</h3></div>
+        <div class="panel-body">
+            <form action="{% url 'transcript_code' %}" method="post">
+                {% csrf_token %}
+                <div class="col-md-8">
+                    <label> <h4><i class="fa fa-mobile-phone"></i>  Enter Code: </h4></label>
+                    <input type="tel" name="code" maxlength="4" id="phone" placeholder="0000" required class="form-text" style="width: 60%;" >
+                </div>
+                <div class="col-md-2">
+                      <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-cloud-download"></i> <b>Get Code</b></button>
+                      </div>
+                </div>
+                <br>
+            </form>
+             <div class="col-md-12">
+                 <h3 style="color: blue;">Wait for at least 10 Seconds to receive code</h3>
+             </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

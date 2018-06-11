@@ -126,6 +126,7 @@ class Marks(models.Model):
     student = models.ForeignKey(User, on_delete=models.CASCADE, related_name='Student', verbose_name='Student')
     score = models.DecimalField(max_digits=25, decimal_places=2, blank=True, null=True)
     course = models.ForeignKey(Courses, on_delete=models.CASCADE, related_name='Course', verbose_name='Course')
+    credit = models.IntegerField(verbose_name='Credit Value')
     semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='semester_s', verbose_name='Semester.')
     exam = models.ForeignKey(Exam, on_delete=models.CASCADE, related_name='Exam_Score', verbose_name='Exam Score',
                              blank=True, null=True)
@@ -142,14 +143,23 @@ class Marks(models.Model):
         return stu + spa + crs + spa + scr + spa + exa + spa + ca
 
 
-class Averages(models.Model):
+class CourseAverage(models.Model):
     course = models.ForeignKey(Courses, on_delete=models.CASCADE, related_name='Course_Avg', verbose_name='Course '
                                                                                                           'Average')
-    semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='semester_Avg',
+    student = models.ForeignKey(User, on_delete=models.CASCADE, related_name='Student_Averages', verbose_name='Student'
+                                                                                                             '`s '
+                                                                                                             'Averages')
+    semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='semester_Avgs',
                                  verbose_name='Semester.')
-    average = models.DecimalField(verbose_name='Average Score', max_digits=10, decimal_places=3)
-    divisor = models.IntegerField(verbose_name='Divisor')
-    total = models.DecimalField(verbose_name='Total Score', max_digits=10, decimal_places=3)
+    average = models.DecimalField(verbose_name='Averages Score', max_digits=10, decimal_places=3)
+    divisor = models.IntegerField(verbose_name='Divisors')
+    credit = models.IntegerField(verbose_name='Credit Value')
+    total = models.DecimalField(verbose_name='Total Scores', max_digits=10, decimal_places=3)
+    # totals = models.DecimalField(verbose_name='Total Scores', max_digits=10, decimal_places=3)
 
     def __str__(self):
         return self.average
+
+
+class FinalScore(models.Model):
+    course = models.DecimalField(max_digits=25, decimal_places=2, blank=True, null=True)

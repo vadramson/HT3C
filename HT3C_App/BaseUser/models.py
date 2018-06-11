@@ -79,6 +79,10 @@ class StudentCourse(models.Model):
         stu_course = str(self.course)
         return stu_course
 
+    @property
+    def course_name(self):
+        return self.course.course
+
 
 class TeacherCourses(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Lecturer')

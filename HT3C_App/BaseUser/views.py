@@ -1,3 +1,5 @@
+import random
+
 from builtins import print
 
 from django.contrib import messages
@@ -28,9 +30,10 @@ from rest_framework.status import HTTP_401_UNAUTHORIZED
 from rest_framework.authtoken.models import Token
 
 # Create your views here.
-from Administration.models import Semester, ContinuousAssessment, Exam, Marks, Courses
+from Administration.models import Semester, ContinuousAssessment, Exam, Marks, Courses, CourseAverage
 from BaseUser.forms import PasswordChgForm, StudentCourseForm
-from BaseUser.models import StudentCourse, TeacherCourses
+from BaseUser.models import StudentCourse, TeacherCourses, Student
+from BaseUser.serializers import CoursesSerializer, StudentCourseSerializer
 
 
 @login_required
@@ -348,7 +351,7 @@ def my_courses_list(request):
 
 @login_required
 def fill_marks(request, pk):
-    global test_marks_list
+    global test_marks_list, cour_avg
     if request.method == 'POST':
         ex = request.POST.get('exam')
         c = request.POST.get('ca')
@@ -393,16 +396,36 @@ def fill_marks(request, pk):
                 if ex != '':
                     exam = get_object_or_404(Exam, pk=request.POST.get('exam'))
                     mark.exam = exam
+                    mark.credit = crse.credit
                     mark.semester = exam.semester
+                    mark.score = (int(scores) * 3)
                     type_score = 'exam'
                 if c != '':
                     ca = get_object_or_404(ContinuousAssessment, pk=request.POST.get('ca'))
                     mark.ca = ca
                     mark.semester = ca.semester
+                    mark.score = (int(scores) * 2)
                     type_score = 'ca'
-                    # average =
+                    test_average = CourseAverage.objects.all().filter(
+                        Q(student=student) & Q(course=crse) & Q(semester=ca.semester))
+                    if test_average.exists():
+                        type_average = 'Exists'
+                        cour_avg = get_object_or_404(CourseAverage,
+                                                     Q(student=student) & Q(course=crse) & Q(semester=ca.semester))
+                        cour_avg.total += (int(scores) * 2)
+                        cour_avg.divisor += 1
+                        cour_avg.average = (cour_avg.total / cour_avg.divisor)
+                    else:
+                        type_average = 'Not Exists'
+                        cour_avg = CourseAverage()
+                        cour_avg.total = (int(scores) * 2)
+                        cour_avg.divisor = 1
+                        cour_avg.average = (int(scores) * 2)
+                        cour_avg.student = student
+                        cour_avg.semester = ca.semester
+                        cour_avg.course = crse
+                        cour_avg.credit = crse.credit
                 mark.student = student
-                mark.score = scores
                 mark.course = crse
                 mark.user = request.user
                 if type_score == 'exam':
@@ -416,6 +439,9 @@ def fill_marks(request, pk):
                     test_marks = list(test_marks_list)
                 else:
                     mark.save()
+                    cour_avg.save()
+                    # average = Averages()
+
                 print('mrks cores are ')
                 # print(st)
                 continue
@@ -503,46 +529,376 @@ def exam_results_home(request):
 
 @login_required
 def final_results_home(request):
-    # return render(request, 'my_results/final_results.html')
-
+    query_outcome = ''
+    exams = Exam.objects.all().order_by('-id')
+    semesters = Semester.objects.all().order_by('-id')
     if request.method == 'POST':
         semester = request.POST.get('semester')
-        result = Marks.objects.all().filter(Q(student=request.user) & Q(semester=semester)).order_by('id')
-        rst_ca = Marks.objects.filter(Q(student=request.user) & Q(semester=semester) & Q(semester=semester) & Q(exam=None)).values('course', 'score')
-        rst_exam = Marks.objects.filter(Q(student=request.user) & Q(semester=semester) & Q(semester=semester) & Q(ca=None)).values('course', 'score')
-        stud = request.user
-        str(stud)
-        sem = semester
-        ex = None
-        # av_ca_marks = Marks.objects.raw(" SELECT AVERAGE(score) AS mrks FROM Administration_marks WHERE student = %s AND semester = %s AND exam = %s " [std, sem, ex])
-        # total = rst_ca.aggregate(total=Avg('score'))
-        exams = Exam.objects.all().order_by('-id')
-        semesters = Semester.objects.all().order_by('-id')
+        semester = get_object_or_404(Semester, pk=semester)
+        result = CourseAverage.objects.all().filter(Q(student=request.user) & Q(semester=semester)).order_by('-course')
+        result_exam = Marks.objects.all().filter(Q(student=request.user) & Q(semester=semester) & Q(ca=None)).order_by(
+            '-course')
+        credit = \
+            CourseAverage.objects.all().filter(Q(student=request.user) & Q(semester=semester)).aggregate(
+                sum=Sum('credit'))[
+                'sum']
+        credit_earn = Marks.objects.all().filter(
+            Q(student=request.user) & Q(semester=semester) & Q(ca=None) & Q(score__lt=10)).aggregate(sum=Sum('credit'))[
+            'sum']
+        print(result_exam)
         result_list = list(result)
-        result_exam = list(rst_exam)
-        result_ca = list(rst_ca)
+        result_list_exam = list(result_exam)
+        final_exam = zip(result_list, result_list_exam)
         if result.exists():
-            query_outcome = 'Results Found'
-            # print(result_list)
-            # print(result_exam)
-            print(rst_ca)
-            # print(rst_exam.query)
-            trp = {}
-            for mk in result_ca:
-                # print(mk)
-                trp = mk
-                print(trp)
-                # lst_mk = list(mk)
-                # print('')
-                # print(lst_mk)
-            print('tuple next')
-            print('')
-            print(trp.course)
+            query_outcome = 'Found Results'
         else:
             query_outcome = 'No Results'
         return render(request, 'my_results/final_results.html',
-                      {"query_outcome": query_outcome, "result_list": result_list, "exams": exams, "semesters": semesters})
+                      {"query_outcome": query_outcome, "result_list": result_list, "result_list_exam": result_list_exam,
+                       "exams": exams, "semesters": semesters, "final_exam": final_exam, "semester": semester,
+                       "credit": credit, "credit_earn": credit_earn})
     else:
-        exams = Exam.objects.all().order_by('-id')
-        semesters = Semester.objects.all().order_by('-id')
         return render(request, 'my_results/final_results.html', {"exams": exams, "semesters": semesters})
+
+
+@login_required
+def print_results(request, pk):
+    print(pk)
+    semester = get_object_or_404(Semester, pk=pk)
+    result = CourseAverage.objects.all().filter(Q(student=request.user) & Q(semester=semester)).order_by('-course')
+    result_exam = Marks.objects.all().filter(Q(student=request.user) & Q(semester=semester) & Q(ca=None)).order_by(
+        '-course')
+    result_list = list(result)
+    print(semester)
+    credit = \
+    CourseAverage.objects.all().filter(Q(student=request.user) & Q(semester=semester)).aggregate(sum=Sum('credit'))[
+        'sum']
+    credit_earn = \
+    Marks.objects.all().filter(Q(student=request.user) & Q(semester=semester) & Q(ca=None) & Q(score__lt=10)).aggregate(
+        sum=Sum('credit'))['sum']
+    print(credit)
+    print(credit_earn)
+    result_list_exam = list(result_exam)
+    final_exam = zip(result_list, result_list_exam)
+    return render(request, 'my_results/final_results_print.html',
+                  {"final_exam": final_exam, "semester": semester, "credit": credit, "credit_earn": credit_earn})
+
+
+@login_required
+def transcript_home(request):
+    return render(request, 'my_results/transcript_pay.html')
+
+
+@login_required
+def transcript_test_code(request):
+    if request.method == "POST":
+        phone = request.POST.get('phone')
+        check_number = Student.objects.all().filter(phone=phone)
+        if check_number.exists():
+            phone_number = get_object_or_404(Student, phone=phone)
+            code = random.randrange(1, 10000)
+            print("code is ...")
+            print(code)
+            request.session['code'] = code
+            # Generate uniquic code and call twillo function and pass the number to send code as message
+            return render(request, 'my_results/transcript_code_check.html', {"code": code})
+        else:
+            msg = 'Invalid Phone Number'
+            print(msg)
+            return render(request, 'my_results/transcript_pay.html', {"msg": msg})
+    else:
+        return render(request, 'my_results/transcript_pay.html')
+
+
+@login_required
+def transcript_code(request):
+    if request.method == "POST":
+        post_code = request.POST.get('code')
+        sent_code = request.session.get('code')
+        code = int(post_code)
+        print("Entered Code is")
+        print(code)
+        print("Session Code is")
+        print(sent_code)
+        if code == sent_code:
+            return render(request, 'my_results/transcript.html', {"code": code})
+        else:
+            msg = 'Invalid Code'
+            print(msg)
+            return render(request, 'my_results/transcript_code_check.html', {"msg": msg})
+    else:
+        return render(request, 'my_results/transcript_code_check.html')
+
+# API VIEWS
+
+
+# Authentication API Views Start
+
+
+@api_view(["POST"])
+def my_drf_login(request):
+    # data = dict()
+    username = request.data.get("username")
+    password = request.data.get("password")
+
+    user = authenticate(username=username, password=password)
+    if not user:
+        return Response({"error": "Login failed"}, status=HTTP_401_UNAUTHORIZED)
+
+    token, _ = Token.objects.get_or_create(user=user)
+    urs = get_object_or_404(User, pk=token.user_id)
+    return Response(
+        {"token": token.key, "user_id": token.user_id, "Username": urs.username, "Name": urs.get_full_name(),
+         "role": urs.student.role, "department": urs.student.department.department_name,
+         "program": urs.student.degree_programm, "picture": urs.student.picture.url})
+
+
+# {"token": token.key, "user_id": token.user_id, "Username": urs.username, "Name": urs.get_full_name(),
+#  "picture": urs.profile.picture.url, "Role": urs.profile.role}
+
+
+@api_view(["POST"])
+def my_drf_logout(request):
+    username = request.data.get("username")
+    password = request.data.get("password")
+
+    user = authenticate(username=username, password=password)
+    if not user:
+        return Response({"error": "Unknown User"}, status=HTTP_401_UNAUTHORIZED)
+    logout(request)
+    return Response({"Respond": "Logout"})
+
+
+# Authentication API Views Ends
+
+
+@api_view(["GET"])
+def get_all_courses(self):
+    subject = Courses.objects.all().order_by('-id')
+    serializer = CoursesSerializer(subject, many=True)
+    return Response({"courses": serializer.data})
+
+
+@api_view(["POST"])
+def my_major_courses(request):
+    tken = request.data.get("user")
+    print(tken)
+    token = get_object_or_404(Token, user_id=tken)
+    print(token.key)
+    urs = get_object_or_404(User, pk=tken)
+    register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Major').order_by('-id')
+    serializer = StudentCourseSerializer(register_courses, many=True)
+    return Response({"major": serializer.data})
+    # return JsonResponse(serializer.data, safe=False)
+
+
+@api_view(["POST"])
+def my_minor_courses(request):
+    tken = request.data.get("user")
+    print(tken)
+    token = get_object_or_404(Token, user_id=tken)
+    print(token.key)
+    urs = get_object_or_404(User, pk=tken)
+    register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Minor').order_by('-id')
+    serializer = StudentCourseSerializer(register_courses, many=True)
+    return Response({"minor": serializer.data})
+
+
+@api_view(["POST"])
+def my_elective_courses(request):
+    tken = request.data.get("user")
+    print(tken)
+    token = get_object_or_404(Token, user_id=tken)
+    print(token.key)
+    urs = get_object_or_404(User, pk=tken)
+    register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Elective').order_by('-id')
+    serializer = StudentCourseSerializer(register_courses, many=True)
+    return Response({"elective": serializer.data})
+
+
+@api_view(["POST"])
+def my_required_courses(request):
+    tken = request.data.get("user")
+    print(tken)
+    token = get_object_or_404(Token, user_id=tken)
+    print(token.key)
+    urs = get_object_or_404(User, pk=tken)
+    register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Required').order_by('-id')
+    serializer = StudentCourseSerializer(register_courses, many=True)
+    return Response({"required": serializer.data})
+
+
+@api_view(["POST"])
+def save_major_courses(request):
+    tken = request.data.get("user")
+    course = request.data.get("id")
+    print(tken)
+    token = get_object_or_404(Token, user_id=tken)
+    print(token.key)
+    urs = get_object_or_404(User, pk=tken)
+    crse = get_object_or_404(Courses, pk=course)
+    register_courses = StudentCourse.objects.all().filter(student=urs, course=course).order_by('-id')
+    if register_courses.exists():
+        register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Major').order_by('-id')
+        serializer = StudentCourseSerializer(register_courses, many=True)
+        return Response({"major": serializer.data, "message": "Cant`t Register the same course twice"})
+    else:
+        stu_crse = StudentCourse()
+        stu_crse.student = urs
+        stu_crse.course = crse
+        stu_crse.type_course = 'Major'
+        stu_crse.save()
+    register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Major').order_by('-id')
+    serializer = StudentCourseSerializer(register_courses, many=True)
+    return Response({"major": serializer.data, "message": "New Major Course Registered"})
+
+
+@api_view(["POST"])
+def save_minor_courses(request):
+    tken = request.data.get("user")
+    course = request.data.get("id")
+    print(tken)
+    token = get_object_or_404(Token, user_id=tken)
+    print(token.key)
+    urs = get_object_or_404(User, pk=tken)
+    crse = get_object_or_404(Courses, pk=course)
+    register_courses = StudentCourse.objects.all().filter(student=urs, course=course).order_by('-id')
+    if register_courses.exists():
+        register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Minor').order_by('-id')
+        serializer = StudentCourseSerializer(register_courses, many=True)
+        return Response({"major": serializer.data, "message": "Cant`t Register the same course twice"})
+    else:
+        stu_crse = StudentCourse()
+        stu_crse.student = urs
+        stu_crse.course = crse
+        stu_crse.type_course = 'Minor'
+        stu_crse.save()
+    register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Minor').order_by('-id')
+    serializer = StudentCourseSerializer(register_courses, many=True)
+    return Response({"major": serializer.data, "message": "New Minor Course Registered"})
+
+
+@api_view(["POST"])
+def save_elective_courses(request):
+    tken = request.data.get("user")
+    course = request.data.get("id")
+    print(tken)
+    token = get_object_or_404(Token, user_id=tken)
+    print(token.key)
+    urs = get_object_or_404(User, pk=tken)
+    crse = get_object_or_404(Courses, pk=course)
+    register_courses = StudentCourse.objects.all().filter(student=urs, course=course).order_by('-id')
+    if register_courses.exists():
+        register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Elective').order_by('-id')
+        serializer = StudentCourseSerializer(register_courses, many=True)
+        return Response({"major": serializer.data, "message": "Cant`t Register the same course twice"})
+    else:
+        stu_crse = StudentCourse()
+        stu_crse.student = urs
+        stu_crse.course = crse
+        stu_crse.type_course = 'Elective'
+        stu_crse.save()
+    register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Elective').order_by('-id')
+    serializer = StudentCourseSerializer(register_courses, many=True)
+    return Response({"major": serializer.data, "message": "New Elective Course Registered"})
+
+
+@api_view(["POST"])
+def save_required_courses(request):
+    tken = request.data.get("user")
+    course = request.data.get("id")
+    print(tken)
+    token = get_object_or_404(Token, user_id=tken)
+    print(token.key)
+    urs = get_object_or_404(User, pk=tken)
+    crse = get_object_or_404(Courses, pk=course)
+    register_courses = StudentCourse.objects.all().filter(student=urs, course=course).order_by('-id')
+    if register_courses.exists():
+        register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Required').order_by('-id')
+        serializer = StudentCourseSerializer(register_courses, many=True)
+        return Response({"major": serializer.data, "message": "Cant`t Register the same course twice"})
+    else:
+        stu_crse = StudentCourse()
+        stu_crse.student = urs
+        stu_crse.course = crse
+        stu_crse.type_course = 'Required'
+        stu_crse.save()
+    register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Required').order_by('-id')
+    serializer = StudentCourseSerializer(register_courses, many=True)
+    return Response({"major": serializer.data, "message": "New Required Course Registered"})
+
+
+@api_view(["POST"])
+def my_courses(request):
+    tken = request.data.get("user")
+    print(tken)
+    token = get_object_or_404(Token, user_id=tken)
+    print(token.key)
+    urs = get_object_or_404(User, pk=tken)
+    register_courses = StudentCourse.objects.all().filter(student=urs).order_by('-id')
+    serializer = StudentCourseSerializer(register_courses, many=True)
+    return Response({"my_courses": serializer.data})
+
+
+@api_view(["POST"])
+def drop_major_courses(request):
+    tken = request.data.get("user")
+    course = request.data.get("id")
+    print(course)
+    major = get_object_or_404(StudentCourse, pk=course)
+    print(major)
+    token = get_object_or_404(Token, user_id=tken)
+    print(token.key)
+    major.delete()
+    urs = get_object_or_404(User, pk=tken)
+    register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Major').order_by('-id')
+    serializer = StudentCourseSerializer(register_courses, many=True)
+    return Response({"message": "Major Course dropped", "major": serializer.data})
+
+
+@api_view(["POST"])
+def drop_minor_courses(request):
+    tken = request.data.get("user")
+    course = request.data.get("id")
+    print(course)
+    major = get_object_or_404(StudentCourse, pk=course)
+    print(major)
+    token = get_object_or_404(Token, user_id=tken)
+    print(token.key)
+    major.delete()
+    urs = get_object_or_404(User, pk=tken)
+    register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Minor').order_by('-id')
+    serializer = StudentCourseSerializer(register_courses, many=True)
+    return Response({"message": "Minor Course dropped", "major": serializer.data})
+
+
+@api_view(["POST"])
+def drop_elective_courses(request):
+    tken = request.data.get("user")
+    course = request.data.get("id")
+    print(course)
+    major = get_object_or_404(StudentCourse, pk=course)
+    print(major)
+    token = get_object_or_404(Token, user_id=tken)
+    print(token.key)
+    major.delete()
+    urs = get_object_or_404(User, pk=tken)
+    register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Elective').order_by('-id')
+    serializer = StudentCourseSerializer(register_courses, many=True)
+    return Response({"message": "Minor Elective dropped", "major": serializer.data})
+
+
+@api_view(["POST"])
+def drop_required_courses(request):
+    tken = request.data.get("user")
+    course = request.data.get("id")
+    print(course)
+    major = get_object_or_404(StudentCourse, pk=course)
+    print(major)
+    token = get_object_or_404(Token, user_id=tken)
+    print(token.key)
+    major.delete()
+    urs = get_object_or_404(User, pk=tken)
+    register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Required').order_by('-id')
+    serializer = StudentCourseSerializer(register_courses, many=True)
+    return Response({"message": "Minor Required dropped", "major": serializer.data})

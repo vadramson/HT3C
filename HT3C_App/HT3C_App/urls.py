@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
+from rest_framework.routers import SimpleRouter
+from rest_framework_jwt.views import obtain_jwt_token
 from django.views.generic import TemplateView
 from django.contrib.auth.views import password_reset, password_reset_done, password_reset_confirm, \
     password_reset_complete
@@ -23,11 +25,16 @@ from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
 from BaseUser import views as urs_views
+# from BaseUser.views import MyMajorCourses
 
+router = SimpleRouter()
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$', urs_views.home, name='home'),
     url(r'^courses/home/$', urs_views.course_reg_home, name='course_reg_home'),
+    url(r'^transcript/home/$', urs_views.transcript_home, name='transcript_home'),
+    url(r'^transcript/check/code/$', urs_views.transcript_test_code, name='transcript_test_code'),
+    url(r'^transcript/code/$', urs_views.transcript_code, name='transcript_code'),
     url(r'^major/course/$', urs_views.major_reg_course_list, name='major_reg_course_list'),
     url(r'^major/course/add/$', urs_views.major_create, name='major_create'),
     url(r'^major/course/(?P<pk>\d+)/drop/$', urs_views.major_delete, name='major_delete'),
@@ -46,10 +53,34 @@ urlpatterns = [
     url(r'^my/final/results/$', urs_views.final_results_home, name='final_results_home'),
     url(r'^my/course/$', urs_views.my_courses_list, name='my_courses_list'),
     url(r'^register/marks/(?P<pk>\d+)/$', urs_views.fill_marks, name='fill_marks'),
+    url(r'^print/results/(?P<pk>\d+)/$', urs_views.print_results, name='print_results'),
     url(r'^results/marks/(?P<pk>\d+)/$', urs_views.results_marks, name='results_marks'),
     url(r'^login/$', auth_views.login, {'template_name': 'login.html'}, name='login'),
     url(r'^logout/$', auth_views.logout, {'next_page': 'login'}, name='logout'),
     url(r'^user/change/my-Password$', urs_views.change_password, name='change_password'),
+
+    # API URLs
+    url(r'^', include(router.urls)),
+    url(r'^api/h3tc/get/all/courses/$', urs_views.get_all_courses),
+    # url(r'^api/h3tc/get/all/major/courses/$', MyMajorCourses.as_view()),
+    url(r'^api/h3tc/get/all/major/courses/$', urs_views.my_major_courses),
+    url(r'^api/h3tc/get/all/minor/courses/$', urs_views.my_minor_courses),
+    url(r'^api/h3tc/get/all/elective/courses/$', urs_views.my_elective_courses),
+    url(r'^api/h3tc/get/all/required/courses/$', urs_views.my_required_courses),
+    url(r'^api/h3tc/add/major/courses/$', urs_views.save_major_courses),
+    url(r'^api/h3tc/add/minor/courses/$', urs_views.save_minor_courses),
+    url(r'^api/h3tc/add/elective/courses/$', urs_views.save_elective_courses),
+    url(r'^api/h3tc/add/required/courses/$', urs_views.save_required_courses),
+    url(r'^api/h3tc/my/courses/$', urs_views.my_courses),
+    url(r'^api/h3tc/drop/major/courses/$', urs_views.drop_major_courses),
+    url(r'^api/h3tc/drop/minor/courses/$', urs_views.drop_minor_courses),
+    url(r'^api/h3tc/drop/elective/courses/$', urs_views.drop_elective_courses),
+    url(r'^api/h3tc/drop/required/courses/$', urs_views.drop_required_courses),
+    url(r'^api/h3tc/jwt-auth/$', obtain_jwt_token),
+    url(r'^api/h3tc/login/$', urs_views.my_drf_login),
+    url(r'^api/h3tc/logout/$', urs_views.my_drf_logout),
+
+
 
 ]
 
