@@ -111,14 +111,14 @@
             <div class="col-md-2x">
                 <img src="{% static 'asset/img/images/uninLogo.png' %}"  alt="University Logo">
                 <br>
-                <div style="font-size: 12px;">Semester Results</div>
+                <div style="font-size: 12px;">Academic Transcript</div>
             </div>
                     </td><td>
             <div class="col-md-5x">
                 <ui class="right_part">
                     <li> <b>Department :</b> {{ user.student.department }} </li>
-                    <li> <b>Semester :</b> {{ semester.semester }} </li>
-                    <li> <b>Academic Year :</b> {{semester.academic_year.accStart|date:'Y'}} / {{semester.academic_year.accEnd|date:'Y'}} </li>
+                    <li> <b>Level :</b> {{ user.student.level }} </li>
+                    <li> <b>Academic Year :</b> {{academic_year.accStart|date:'Y'}} / {{academic_year.accEnd|date:'Y'}} </li>
                     <li> <b>Printed on :</b> {% now " d F Y " %} at {% now "H:i" %} </li>
                 </ui>
             </div>

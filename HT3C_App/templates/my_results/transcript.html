@@ -43,22 +43,22 @@
 </div>
 <div class="col-md-12">
     <div class="panel">
-        <div class="panel-heading"><h3>Select Semester</h3></div>
+        <div class="panel-heading"><h3>Select Academic Year</h3></div>
         <b class="panel-body">
-            <form action="{% url 'final_results_home' %}" method="post">
+            <form action="{% url 'transcript_calculation' %}" method="post">
                 {% csrf_token %}
                 <div class="col-md-8">
-                    <label> <h3>Semester: </h3></label>
-                    <select name="semester" id="ca" required class="form-text">
-                        <option value="">--- Select Semester to view results ---</option>
-                        {% for semester in semesters %}
-                        <option value="{{semester.id}}">{{semester.semester}} -- Academic year {{semester.academic_year.accStart|date:'Y'}} / {{semester.academic_year.accEnd|date:'Y'}}</option>
+                    <label> <h3>Academic Year: </h3></label>
+                    <select name="academic_year" id="ca" required class="form-text">
+                        <option value="">--- Select Academic Year to view results ---</option>
+                        {% for acyr in acc_yr %}
+                        <option value="{{acyr.id}}"> Academic year {{acyr.accStart|date:'Y'}} / {{acyr.accEnd|date:'Y'}}</option>
                         {% endfor %}
                     </select>
                 </div>
                 <div class="col-md-2">
                       <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary"><i class="fa fa-cloud-download"></i> <b>Get Results</b></button>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-cloud-download"></i> <b>Get Transcript</b></button>
                       </div>
                 </div>
                 <br>
@@ -127,15 +127,16 @@
             </b>
             <div class="col-md-2" style="float: right;">
                   <div class="modal-footer">
-                    <a target="_blank" href="{% url 'print_results' semester.id %}" type="button" class="btn btn-success"><i class="fa fa-print"></i> <b>Print Results {{semester.id}}</b></a>
+                    <a target="_blank" href="{% url 'print_transcript' academic_year.id %}" type="button" class="btn btn-success"><i class="fa fa-print"></i> <b>Print Results {{semester.id}}</b></a>
                   </div>
             </div>
         {% else %}
              <div class="col-md-12">
-                 <h3>Select Semester to view Results</h3>
+                 <h3>Select Academic Year to view Results</h3>
              </div>
         {% endif %}
-        </div>
+        </b>
+
     </div>
 </div>
 

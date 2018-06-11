@@ -130,6 +130,8 @@ class Marks(models.Model):
     semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='semester_s', verbose_name='Semester.')
     exam = models.ForeignKey(Exam, on_delete=models.CASCADE, related_name='Exam_Score', verbose_name='Exam Score',
                              blank=True, null=True)
+    academic_year = models.ForeignKey(AcademicYear, on_delete=models.CASCADE, related_name='AcademicYear',
+                                      verbose_name='School Year')
     ca = models.ForeignKey(ContinuousAssessment, on_delete=models.CASCADE, related_name='CA_Score',
                            verbose_name='CA Score', blank=True, null=True)
 
@@ -155,6 +157,8 @@ class CourseAverage(models.Model):
     divisor = models.IntegerField(verbose_name='Divisors')
     credit = models.IntegerField(verbose_name='Credit Value')
     total = models.DecimalField(verbose_name='Total Scores', max_digits=10, decimal_places=3)
+    academic_year = models.ForeignKey(AcademicYear, on_delete=models.CASCADE, related_name='Academic_Year',
+                                      verbose_name='School Year')
     # totals = models.DecimalField(verbose_name='Total Scores', max_digits=10, decimal_places=3)
 
     def __str__(self):

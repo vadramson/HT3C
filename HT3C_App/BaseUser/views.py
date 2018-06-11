@@ -30,7 +30,7 @@ from rest_framework.status import HTTP_401_UNAUTHORIZED
 from rest_framework.authtoken.models import Token
 
 # Create your views here.
-from Administration.models import Semester, ContinuousAssessment, Exam, Marks, Courses, CourseAverage
+from Administration.models import Semester, ContinuousAssessment, Exam, Marks, Courses, CourseAverage, AcademicYear
 from BaseUser.forms import PasswordChgForm, StudentCourseForm
 from BaseUser.models import StudentCourse, TeacherCourses, Student
 from BaseUser.serializers import CoursesSerializer, StudentCourseSerializer
@@ -354,6 +354,8 @@ def fill_marks(request, pk):
     global test_marks_list, cour_avg
     if request.method == 'POST':
         ex = request.POST.get('exam')
+        print('ex is')
+        print(ex)
         c = request.POST.get('ca')
         fat_1 = ''
         if c == '' and ex != '':
@@ -385,6 +387,7 @@ def fill_marks(request, pk):
             for scores, stdts in stu_scr:
                 type_score = ''
                 mark = Marks()
+                # cour_avg = CourseAverage()
                 if scores == '':
                     scores = 0
                 score = scores
@@ -398,12 +401,14 @@ def fill_marks(request, pk):
                     mark.exam = exam
                     mark.credit = crse.credit
                     mark.semester = exam.semester
+                    mark.academic_year = exam.semester.academic_year
                     mark.score = (int(scores) * 3)
                     type_score = 'exam'
                 if c != '':
                     ca = get_object_or_404(ContinuousAssessment, pk=request.POST.get('ca'))
                     mark.ca = ca
                     mark.semester = ca.semester
+                    mark.academic_year = ca.semester.academic_year
                     mark.score = (int(scores) * 2)
                     type_score = 'ca'
                     test_average = CourseAverage.objects.all().filter(
@@ -417,16 +422,18 @@ def fill_marks(request, pk):
                         cour_avg.average = (cour_avg.total / cour_avg.divisor)
                     else:
                         type_average = 'Not Exists'
-                        cour_avg = CourseAverage()
+                        # cour_avg = CourseAverage()
                         cour_avg.total = (int(scores) * 2)
                         cour_avg.divisor = 1
                         cour_avg.average = (int(scores) * 2)
                         cour_avg.student = student
                         cour_avg.semester = ca.semester
                         cour_avg.course = crse
+                        cour_avg.academic_year = ca.semester.academic_year
                         cour_avg.credit = crse.credit
                 mark.student = student
                 mark.course = crse
+                mark.credit = crse.credit
                 mark.user = request.user
                 if type_score == 'exam':
                     test_marks_list = Marks.objects.all().filter(
@@ -571,11 +578,12 @@ def print_results(request, pk):
     result_list = list(result)
     print(semester)
     credit = \
-    CourseAverage.objects.all().filter(Q(student=request.user) & Q(semester=semester)).aggregate(sum=Sum('credit'))[
-        'sum']
+        CourseAverage.objects.all().filter(Q(student=request.user) & Q(semester=semester)).aggregate(sum=Sum('credit'))[
+            'sum']
     credit_earn = \
-    Marks.objects.all().filter(Q(student=request.user) & Q(semester=semester) & Q(ca=None) & Q(score__lt=10)).aggregate(
-        sum=Sum('credit'))['sum']
+        Marks.objects.all().filter(
+            Q(student=request.user) & Q(semester=semester) & Q(ca=None) & Q(score__lt=10)).aggregate(
+            sum=Sum('credit'))['sum']
     print(credit)
     print(credit_earn)
     result_list_exam = list(result_exam)
@@ -621,13 +629,74 @@ def transcript_code(request):
         print("Session Code is")
         print(sent_code)
         if code == sent_code:
-            return render(request, 'my_results/transcript.html', {"code": code})
+            acc_yr = AcademicYear.objects.all()
+            return render(request, 'my_results/transcript.html', {"code": code, "acc_yr": acc_yr})
         else:
             msg = 'Invalid Code'
             print(msg)
             return render(request, 'my_results/transcript_code_check.html', {"msg": msg})
     else:
         return render(request, 'my_results/transcript_code_check.html')
+
+
+@login_required
+def transcript_calculation(request):
+    query_outcome = ''
+    exams = Exam.objects.all().order_by('-id')
+    semesters = Semester.objects.all().order_by('-id')
+    academic_year = get_object_or_404(AcademicYear, pk=request.POST.get('academic_year'))
+    if request.method == 'POST':
+        result = CourseAverage.objects.all().filter(Q(student=request.user) & Q(academic_year=academic_year)).order_by('-course')
+        result_exam = Marks.objects.all().filter(Q(student=request.user) & Q(academic_year=academic_year) & Q(ca=None)).order_by(
+            '-course')
+        credit = \
+            CourseAverage.objects.all().filter(Q(student=request.user) & Q(academic_year=academic_year)).aggregate(
+                sum=Sum('credit'))[
+                'sum']
+        credit_earn = Marks.objects.all().filter(
+            Q(student=request.user) & Q(academic_year=academic_year) & Q(ca=None) & Q(score__lt=10)).aggregate(sum=Sum('credit'))[
+            'sum']
+        print(result_exam)
+        result_list = list(result)
+        result_list_exam = list(result_exam)
+        final_exam = zip(result_list, result_list_exam)
+        if result.exists():
+            query_outcome = 'Found Results'
+        else:
+            query_outcome = 'No Results'
+        return render(request, 'my_results/transcript.html',
+                      {"query_outcome": query_outcome, "result_list": result_list, "result_list_exam": result_list_exam,
+                       "exams": exams, "semesters": semesters, "final_exam": final_exam, "academic_year": academic_year,
+                       "credit": credit, "credit_earn": credit_earn})
+    else:
+        return render(request, 'my_results/transcript.html', {"exams": exams, "semesters": semesters})
+
+
+@login_required
+def print_transcript(request, pk):
+    print(pk)
+    academic_year = get_object_or_404(AcademicYear, pk=pk)
+    result = CourseAverage.objects.all().filter(Q(student=request.user) & Q(academic_year=academic_year)).order_by('-course')
+    result_exam = Marks.objects.all().filter(Q(student=request.user) & Q(academic_year=academic_year) & Q(ca=None)).order_by(
+        '-course')
+    result_list = list(result)
+    print(academic_year)
+    credit = \
+        CourseAverage.objects.all().filter(Q(student=request.user) & Q(academic_year=academic_year)).aggregate(sum=Sum('credit'))[
+            'sum']
+    credit_earn = \
+        Marks.objects.all().filter(
+            Q(student=request.user) & Q(academic_year=academic_year) & Q(ca=None) & Q(score__lt=10)).aggregate(
+            sum=Sum('credit'))['sum']
+    print(credit)
+    print(credit_earn)
+    result_list_exam = list(result_exam)
+    final_exam = zip(result_list, result_list_exam)
+    return render(request, 'my_results/final_transcript_print.html',
+                  {"final_exam": final_exam, "academic_year": academic_year, "credit": credit, "credit_earn": credit_earn})
+
+
+
 
 # API VIEWS
 
