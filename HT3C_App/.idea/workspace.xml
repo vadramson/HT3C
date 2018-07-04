@@ -8,24 +8,7 @@
       <change beforePath="$PROJECT_DIR$/../../../../Pro/Africashine/requirements.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../Pro/Africashine/templates/users_Super/users_Donor_Admin_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Pro/Africashine/templates/users_Super/users_Donor_Admin_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Administration/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Administration/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseUser/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BaseUser/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseUser/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/BaseUser/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseUser/static/asset/img/images/uninLogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/BaseUser/static/asset/img/images/uninLogo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseUser/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BaseUser/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HT3C_App/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/HT3C_App/settings/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HT3C_App/settings/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/HT3C_App/settings/local.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HT3C_App/settings/production.py" beforeDir="false" afterPath="$PROJECT_DIR$/HT3C_App/settings/production.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HT3C_App/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/HT3C_App/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_courses/includes/partial_my_course_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/my_courses/includes/partial_my_course_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_courses/includes/partial_my_student_course_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/my_courses/includes/partial_my_student_course_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_courses/success_registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/my_courses/success_registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_results/final_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/my_results/final_results.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_results/final_results_print.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/my_results/final_results_print.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_results/final_transcript_print.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/my_results/final_transcript_print.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_results/transcript.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/my_results/transcript.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../QuickApp/.idea/QuickApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/.idea/QuickApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../QuickApp/.idea/dataSources/59661a04-a47f-4aea-abe9-ef01a1c3e134.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/.idea/dataSources/59661a04-a47f-4aea-abe9-ef01a1c3e134.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../QuickApp/.idea/dataSources/59661a04-a47f-4aea-abe9-ef01a1c3e134/storage.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../QuickApp/.idea/dataSources/59661a04-a47f-4aea-abe9-ef01a1c3e134/storage.xml" afterDir="false" />
@@ -364,8 +347,8 @@
       <file leaf-file-name="base.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HT3C_App/settings/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="126" selection-start-line="126" selection-end-line="132" selection-end-column="1" />
+            <state relative-caret-position="210">
+              <caret line="139" column="29" lean-forward="true" selection-start-line="139" selection-start-column="29" selection-end-line="139" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -1118,8 +1101,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HT3C_App/settings/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="126" selection-start-line="126" selection-end-line="132" selection-end-column="1" />
+        <state relative-caret-position="210">
+          <caret line="139" column="29" lean-forward="true" selection-start-line="139" selection-start-column="29" selection-end-line="139" selection-end-column="29" />
         </state>
       </provider>
     </entry>
