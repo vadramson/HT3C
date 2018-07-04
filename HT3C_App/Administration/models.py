@@ -18,10 +18,16 @@ class AcademicYear(models.Model):
     accEnd = models.DateField(unique=True, blank=False, null=False)
 
     def __str__(self):
-        st = str(self.accStart)
-        ed = str(self.accEnd)
+        st = str(self.accStart.strftime("%Y"))
+        ed = str(self.accEnd.strftime("%Y"))
         sl = ' / '
         return st + sl + ed
+
+    @property
+    def aca(self):
+        date_start = self.accStart.strftime("%Y")
+        date_end = self.accEnd.strftime("%Y")
+        return date_start + '/' + date_end
 
 
 class Semester(models.Model):
@@ -36,6 +42,16 @@ class Semester(models.Model):
         academic_year = str(self.academic_year)
         of = ' OF '
         return self.semester + of + academic_year
+
+    @property
+    def sem(self):
+        return self.semester
+
+    @property
+    def aca(self):
+        date_start = self.academic_year.accStart.strftime("%Y")
+        date_end = self.academic_year.accEnd.strftime("%Y")
+        return date_start + '/' + date_end
 
 
 class Department(models.Model):
@@ -68,6 +84,16 @@ class ContinuousAssessment(models.Model):
         spa = ' - '
         return self.ca + spa + sem
 
+    @property
+    def sem(self):
+        return self.semester.semester
+
+    @property
+    def aca(self):
+        date_start = self.semester.academic_year.accStart.strftime("%Y")
+        date_end = self.semester.academic_year.accEnd.strftime("%Y")
+        return date_start + '/' + date_end
+
 
 class Courses(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -99,6 +125,16 @@ class Exam(models.Model):
         spa = ' - '
         return self.exam + spa + sem
 
+    @property
+    def sem(self):
+        return self.semester.semester
+
+    @property
+    def aca(self):
+        date_start = self.semester.academic_year.accStart.strftime("%Y")
+        date_end = self.semester.academic_year.accEnd.strftime("%Y")
+        return date_start + '/' + date_end
+
 
 OPEN = 1
 CLOSED = 0
@@ -127,7 +163,8 @@ class Marks(models.Model):
     score = models.DecimalField(max_digits=25, decimal_places=2, blank=True, null=True)
     course = models.ForeignKey(Courses, on_delete=models.CASCADE, related_name='Course', verbose_name='Course')
     credit = models.IntegerField(verbose_name='Credit Value')
-    semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='semester_s', verbose_name='Semester.')
+    semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='semester_s',
+                                 verbose_name='Semester.')
     exam = models.ForeignKey(Exam, on_delete=models.CASCADE, related_name='Exam_Score', verbose_name='Exam Score',
                              blank=True, null=True)
     academic_year = models.ForeignKey(AcademicYear, on_delete=models.CASCADE, related_name='AcademicYear',
@@ -144,13 +181,29 @@ class Marks(models.Model):
         spa = ' - '
         return stu + spa + crs + spa + scr + spa + exa + spa + ca
 
+    @property
+    def course_name(self):
+        return self.course.course
+
+    @property
+    def course_credit(self):
+        return self.course.credit
+
+    @property
+    def course_code(self):
+        return self.course.code
+
+    @property
+    def course_ca(self):
+        return self.course.ca
+
 
 class CourseAverage(models.Model):
     course = models.ForeignKey(Courses, on_delete=models.CASCADE, related_name='Course_Avg', verbose_name='Course '
                                                                                                           'Average')
     student = models.ForeignKey(User, on_delete=models.CASCADE, related_name='Student_Averages', verbose_name='Student'
-                                                                                                             '`s '
-                                                                                                             'Averages')
+                                                                                                              '`s '
+                                                                                                              'Averages')
     semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='semester_Avgs',
                                  verbose_name='Semester.')
     average = models.DecimalField(verbose_name='Averages Score', max_digits=10, decimal_places=3)
@@ -159,10 +212,28 @@ class CourseAverage(models.Model):
     total = models.DecimalField(verbose_name='Total Scores', max_digits=10, decimal_places=3)
     academic_year = models.ForeignKey(AcademicYear, on_delete=models.CASCADE, related_name='Academic_Year',
                                       verbose_name='School Year')
+    exam_score = models.DecimalField(verbose_name='Exam Score', max_digits=10, decimal_places=3, blank=True, null=True)
+    course_exam = models.DecimalField(verbose_name='Course Exam', max_digits=10, decimal_places=3, blank=True,
+                                      null=True)
+    grade_point = models.DecimalField(verbose_name='Grade points', max_digits=10, decimal_places=3, blank=True,
+                                      null=True)
+
     # totals = models.DecimalField(verbose_name='Total Scores', max_digits=10, decimal_places=3)
 
     def __str__(self):
         return self.average
+
+    @property
+    def course_name(self):
+        return self.course.course
+
+    @property
+    def course_credit(self):
+        return self.course.credit
+
+    @property
+    def course_code(self):
+        return self.course.code
 
 
 class FinalScore(models.Model):

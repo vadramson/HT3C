@@ -1,0 +1,51 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block content %}
+<style>
+    table th {font-family: "Adobe Caslon Pro";
+         font-size: 25px;
+         padding: 10px;
+         }
+
+    table td {font-family: "Adobe Caslon Pro";
+     font-size: 15px;
+
+     }
+</style>
+
+<div class="col-md-12">
+     {% if fatal == 'Occurred' %}
+      <div class="alert alert-warning alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <h4><i class="icon fa fa-check"></i> Marks Not Registered  !</h4>
+          <stron> <h5>Marks Exists already or you did not select on one of the mark types</h5></stron>
+      </div>
+    {% endif %}
+    <div class="panel box-v1">
+        <div class="panel-heading bg-white border-none">
+            <div class="col-md-11 col-sm-11 col-xs-11 text-left padding-0">
+                <div class="text-left" style="text-align: center; color: blue;">
+                    <h3>CA Register Students Marks for {{ courses.course.course }} &nbsp;&nbsp;&nbsp; Code {{courses.course.code}}  {{courses.levele}}</h3>
+                </div>
+            </div>
+            <div class="col-md-1 col-sm-1 col-xs-1 text-right">
+                <h4>
+                    <span class="icon-book-open icons icon text-right"></span>
+                </h4>
+            </div>
+        </div>
+        <div class="panel-body text-center">
+
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="panel">
+        <div class="panel-heading"><h3>Students offering {{ courses.course.course }} at {{courses.levele}}</h3></div>
+        <div class="panel-body">
+            {% include 'my_courses/includes/partial_my_student_course_list_ca.html' %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

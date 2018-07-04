@@ -8,11 +8,18 @@
     <td >
       <a type="button"
               class="btn btn-primary btn-xs"
-              href="{% url 'fill_marks' my_course.id %}"
-              data-toggle="tooltip" data-placement="top" title="Enter Marks (CA / Exam)">
+              href="{% url 'fill_marks_exam' my_course.id %}"
+              data-toggle="tooltip" data-placement="top" title="Enter Exam Marks">
         <span class="fa fa-send"></span>
       </a>
       &nbsp;
+      <a type="button"
+              class="btn btn-info btn-xs"
+              href="{% url 'fill_marks_ca' my_course.id %}"
+              data-toggle="tooltip" data-placement="top" title="Enter CA Marks">
+        <span class="fa fa-send"></span>
+      </a>
+      &nbsp;&nbsp;
       <a type="button"
               class="btn btn-success btn-xs"
               href="{% url 'results_marks' my_course.id %}"

@@ -51,7 +51,7 @@
             <th>Name</th>
             <th>Matriculation</th>
             <th>Credit Value</th>
-            <th>Score/20</th>
+            <th>Score/40</th>
         </tr>
        </thead>
        <tbody>
@@ -61,9 +61,9 @@
             <td>{{ stu.student.student.user.get_full_name}} </td>
             <td>{{ stu.student.student.matriculation}} </td>
             <td>{{ stu.course.credit }} </td>
-            {% if stu.score >= 12 %}
+            {% if stu.score >= 20 %}
             <td style="color: blue;">{{ stu.score }}</td>
-            {% elif stu.score < 12 %}
+            {% elif stu.score < 20 %}
             <td style="color: red;">{{ stu.score }}</td>
             {% endif %}
         </tr>

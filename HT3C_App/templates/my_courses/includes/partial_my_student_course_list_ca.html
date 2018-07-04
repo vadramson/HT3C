@@ -1,0 +1,42 @@
+<form method="post" action="{% url 'fill_marks_ca' courses.id %}">
+  {% csrf_token %}
+    <div class="col-md-12">
+            <label> <h3>Continuous Assessment (CA): </h3></label>
+            <select name="ca" id="ca"  class="form-text" required>
+                <option value=""></option>
+                {% for ca in possible_ca %}
+                <option value="{{ca.id}}">{{ca.ca}} -- {{ca.semester.semester}} Academic Year {{ca.semester.academic_year.accStart|date:'Y'}} / {{ca.semester.academic_year.accEnd|date:'Y'}}</option>
+                {% endfor %}
+            </select>
+    </div>
+
+    <table id="datatables-example" class="table table-striped table-bordered" width="100%" cellspacing="0">
+        <thead>
+        <tr style="background-color: skyblue; color: blue;">
+            <th>S/N</th>
+            <th>Name</th>
+            <th>Matriculation</th>
+            <th>Credit Value</th>
+            <th>Score/40</th>
+        </tr>
+       </thead>
+       <tbody>
+        {% for stu in stus %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td><input name="student" type="hidden" value="{{ stu.student.student.user.id}}"> {{ stu.student.student.user.get_full_name}} </td>
+            <td><input name="user" type="hidden" value="{{ user.id}}"> {{ stu.student.student.matriculation}} </td>
+            <td> {{ courses.course.credit }} </td>
+            <td>
+                <input name="course_id" type="hidden" value="{{ courses.course.id}}">
+                <input type="number" min="0" max="40" name="score" id="score">
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <br>
+<div class="modal-footer">
+    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> <b>Save Results</b></button>
+  </div>
+</form>

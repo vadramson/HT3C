@@ -82,32 +82,32 @@
         </tr>
        </thead>
        <tbody>
-        {% for stu, ex in final_exam %}
+        {% for stu in result_list %}
         <tr>
             <td>{{ forloop.counter }}</td>
             <td>{{ stu.course.code}} </td>
             <td>{{ stu.course}} </td>
             <td>{{ stu.course.credit }} </td>
             <td>{{ stu.average}} </td>
-            <td>{{ ex.score}}</td>
-            <td>{{ ex.score|add:stu.average }}</td>
-            {% if ex.score|add:stu.average >= 90 %}
+            <td>{{ stu.exam_score}}</td>
+            <td>{{ stu.course_exam }}</td>
+            {% if stu.course_exam >= 90 %}
             <td style="color: blue;">A+</td>
-            {% elif ex.score|add:stu.average >= 80 %}
+            {% elif stu.course_exam >= 80 %}
             <td style="color: blue;">A</td>
-            {% elif ex.score|add:stu.average >= 70 %}
-            <td style="color: red;">B+</td>
-            {% elif ex.score|add:stu.average >= 60 %}
-            <td style="color: red;">B</td>
-            {% elif ex.score|add:stu.average >= 50 %}
-            <td style="color: red;">C+</td>
-            {% elif ex.score|add:stu.average >= 40 %}
+            {% elif stu.course_exam >= 70 %}
+            <td style="color: blue;">B+</td>
+            {% elif stu.course_exam >= 60 %}
+            <td style="color: blue;">B</td>
+            {% elif stu.course_exam >= 50 %}
+            <td style="color: blue;">C+</td>
+            {% elif stu.course_exam >= 40 %}
             <td style="color: red;">C</td>
-            {% elif ex.score|add:stu.average >= 30 %}
+            {% elif stu.course_exam >= 30 %}
             <td style="color: red;">D</td>
-            {% elif ex.score|add:stu.average >= 20 %}
+            {% elif stu.course_exam >= 20 %}
             <td style="color: red;">E</td>
-            {% elif ex.score|add:stu.average <= 10 %}
+            {% elif stu.course_exam <= 10 %}
             <td style="color: red;">F</td>
             {% endif %}
         </tr>
@@ -118,23 +118,24 @@
            <b>
             Attempted Credit: {{credit}}   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Credit Earn:
                 {% if credit_earn == NULL %}
-                    {{credit|sub:0}}
+                    0
                 {% else %}
-                    {{credit|sub:credit_earn}}
-                {% endif %}
-                ;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;&nbsp;
-                GPA / 4.0	3
+                    {{credit_earn}}
+                {% endif %}safe|linebreaks|truncatechars
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                GPA <span style="color: blue">{{gpa|truncatechars:7}} </span> / 4.0
             </b>
             <div class="col-md-2" style="float: right;">
                   <div class="modal-footer">
-                    <a target="_blank" href="{% url 'print_results' semester.id %}" type="button" class="btn btn-success"><i class="fa fa-print"></i> <b>Print Results {{semester.id}}</b></a>
+                    <a target="_blank" href="{% url 'print_results' semester.id %}" type="button" class="btn btn-success"><i class="fa fa-print"></i> <b>Print Results</b></a>
                   </div>
             </div>
-        {% else %}
-             <div class="col-md-12">
-                 <h3>Select Semester to view Results</h3>
-             </div>
-        {% endif %}
+            {% else %}
+                 <div class="col-md-12">
+                     <h3>Select Semester to view Results</h3>
+                 </div>
+            {% endif %}
+        </b>
         </div>
     </div>
 </div>

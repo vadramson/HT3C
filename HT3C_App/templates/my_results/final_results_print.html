@@ -3,12 +3,12 @@
 {% load tz %}
 {% load mathfilters %}
 {% block content %}
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html lang="en">
 <head>
 
 	<meta charset="utf-8">
-	<meta name="description" content="HT3C By Vadramson Solutions>
+	<meta name="description" content="HT3C By Vadramson Solutions">
 	<meta name="author" content="Vadrama NDISANG">
 	<meta name="keyword" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -143,50 +143,47 @@
         </tr>
        </thead>
        <tbody>
-        {% for stu, ex in final_exam %}
+        {% for stu in result_list %}
         <tr>
             <td>{{ forloop.counter }}</td>
             <td>{{ stu.course.code}} </td>
             <td>{{ stu.course}} </td>
             <td>{{ stu.course.credit }} </td>
             <td>{{ stu.average}} </td>
-            <td>{{ ex.score}}</td>
-            <td>{{ ex.score|add:stu.average }}</td>
-            {% if ex.score|add:stu.average >= 90 %}
+            <td>{{ stu.exam_score}}</td>
+            <td>{{ stu.course_exam }}</td>
+            {% if stu.course_exam >= 90 %}
             <td style="color: blue;">A+</td>
-            {% elif ex.score|add:stu.average >= 80 %}
+            {% elif stu.course_exam >= 80 %}
             <td style="color: blue;">A</td>
-            {% elif ex.score|add:stu.average >= 70 %}
-            <td style="color: red;">B+</td>
-            {% elif ex.score|add:stu.average >= 60 %}
-            <td style="color: red;">B</td>
-            {% elif ex.score|add:stu.average >= 50 %}
-            <td style="color: red;">C+</td>
-            {% elif ex.score|add:stu.average >= 40 %}
+            {% elif stu.course_exam >= 70 %}
+            <td style="color: blue;">B+</td>
+            {% elif stu.course_exam >= 60 %}
+            <td style="color: blue;">B</td>
+            {% elif stu.course_exam >= 50 %}
+            <td style="color: blue;">C+</td>
+            {% elif stu.course_exam >= 40 %}
             <td style="color: red;">C</td>
-            {% elif ex.score|add:stu.average >= 30 %}
+            {% elif stu.course_exam >= 30 %}
             <td style="color: red;">D</td>
-            {% elif ex.score|add:stu.average >= 20 %}
+            {% elif stu.course_exam >= 20 %}
             <td style="color: red;">E</td>
-            {% elif ex.score|add:stu.average <= 10 %}
+            {% elif stu.course_exam <= 10 %}
             <td style="color: red;">F</td>
             {% endif %}
         </tr>
         {% endfor %}
         </tbody>
     </table>
-            <br>
-            <b style="margin: auto;">
+            <b>
             Attempted Credit: {{credit}}   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Credit Earn:
                 {% if credit_earn == NULL %}
-                    {{credit|sub:0}}
+                    0
                 {% else %}
-                    {{credit|sub:credit_earn}}
+                    {{credit_earn}}
                 {% endif %}
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                GPA / 4.0
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                3
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                GPA <span style="color: blue">{{gpa|truncatechars:7}} </span> / 4.0
             </b>
         {% else %}
              <div class="col-md-12">

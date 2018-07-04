@@ -1,0 +1,77 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block content %}
+<style>
+    table th {font-family: "Adobe Caslon Pro";
+         font-size: 25px;
+         padding: 10px;
+         }
+
+    table td {font-family: "Adobe Caslon Pro";
+     font-size: 15px;
+
+     }
+</style>
+
+<div class="col-md-12">
+      {% if fatal == 'None' %}
+      <div class="alert alert-primary alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <h4><i class="icon fa fa-check"></i> Marks Registered  !</h4>
+        Marks Registered Successfully
+      </div>
+    {% endif %}
+
+    <div class="panel box-v1">
+        <div class="panel-heading bg-white border-none">
+            <div class="col-md-11 col-sm-11 col-xs-11 text-left padding-0">
+                <div class="text-left" style="text-align: center; color: blue;">
+                    <h3> Results for {{ crse.course.course }} Code {{crse.course.code}}  {{crse.levele}}</h3>
+                </div>
+            </div>
+            <div class="col-md-1 col-sm-1 col-xs-1 text-right">
+                <h4>
+                    <span class="icon-book-open icons icon text-right"></span>
+                </h4>
+            </div>
+        </div>
+        <div class="panel-body text-center">
+
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="panel">
+        <div class="panel-heading"><h3>Marks for {{ crse.course.course }} at {{crse.levele}}</h3></div>
+        <div class="panel-body">
+            <table id="datatables-example" class="table table-striped table-bordered" width="100%" cellspacing="0">
+        <thead>
+        <tr style="background-color: skyblue; color: blue;">
+            <th>S/N</th>
+            <th>Name</th>
+            <th>Matriculation</th>
+            <th>Credit Value</th>
+            <th>Score/60</th>
+        </tr>
+       </thead>
+       <tbody>
+        {% for stu in result_list %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ stu.student.student.user.get_full_name}} </td>
+            <td>{{ stu.student.student.matriculation}} </td>
+            <td>{{ stu.course.credit }} </td>
+            {% if stu.score >= 30 %}
+            <td style="color: blue;">{{ stu.score }}</td>
+            {% elif stu.score < 30 %}
+            <td style="color: red;">{{ stu.score }}</td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

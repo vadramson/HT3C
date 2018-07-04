@@ -33,7 +33,8 @@ from rest_framework.authtoken.models import Token
 from Administration.models import Semester, ContinuousAssessment, Exam, Marks, Courses, CourseAverage, AcademicYear
 from BaseUser.forms import PasswordChgForm, StudentCourseForm
 from BaseUser.models import StudentCourse, TeacherCourses, Student
-from BaseUser.serializers import CoursesSerializer, StudentCourseSerializer
+from BaseUser.serializers import CoursesSerializer, StudentCourseSerializer, MarksSerializer, \
+    ContinuousAssessmentSerializer, ExamSerializer, SemesterSerializer, CourseAverageSerializer, AcademicYearSerializer
 
 
 @login_required
@@ -480,6 +481,230 @@ def fill_marks(request, pk):
         course = courses.course
         print(course)
         possible_ca = ContinuousAssessment.objects.all().filter(status=1).order_by('-id')
+        # for pCA in possible_ca:
+        #     print(pCA.mark)
+        possible_exam = Exam.objects.all().filter(status=1).order_by('-id')
+        stus = StudentCourse.objects.all().filter(course=course).order_by('id')
+        return render(request, 'my_courses/register_marks.html',
+                      {"courses": courses, "stus": stus, "possible_ca": possible_ca, "possible_exam": possible_exam})
+
+
+@login_required
+def fill_marks_ca(request, pk):
+    global test_marks_list, cour_avg
+    if request.method == 'POST':
+        c = request.POST.get('ca')
+
+        courses = get_object_or_404(TeacherCourses, pk=pk)
+        course = courses.course
+        stus = StudentCourse.objects.all().filter(course=course).order_by('id')
+        print('Post Received')
+        ct = stus.count()
+        print(ct)
+        course_id = request.POST.get('course_id')
+        score_list = request.POST.getlist('score')
+        student_list = request.POST.getlist('student')
+        print('First score List')
+        print(score_list)
+        print('First student List')
+        print(student_list)
+        stu_scr = zip(score_list, student_list)
+        st = []
+        mrk_list = []
+        for scores, stdts in stu_scr:
+            mark = Marks()
+            # cour_avg = CourseAverage()
+            if scores == '':
+                scores = 0
+            score = scores
+            # print(score)
+            sts = stdts
+            # print(sts)
+            student = get_object_or_404(User, pk=sts)
+            crse = get_object_or_404(Courses, pk=course_id)
+            ca = get_object_or_404(ContinuousAssessment, pk=request.POST.get('ca'))
+            mark.ca = ca
+            mark.semester = ca.semester
+            mark.academic_year = ca.semester.academic_year
+            mark.score = int(scores)
+            test_average = CourseAverage.objects.all().filter(
+                Q(student=student) & Q(course=crse) & Q(semester=ca.semester))
+            if test_average.exists():
+                type_average = 'Exists'
+                cour_avg = get_object_or_404(CourseAverage,
+                                             Q(student=student) & Q(course=crse) & Q(semester=ca.semester))
+                cour_avg.total += int(scores)
+                cour_avg.divisor += 1
+                cour_avg.average = (cour_avg.total / cour_avg.divisor)
+                if cour_avg.exam_score is None:
+                    ce = 0
+                else:
+                    ce = cour_avg.exam_score
+                cour_avg.course_exam = (cour_avg.average + ce)
+                gp_tmp = (cour_avg.course_exam / 25)
+                cv_tmp = crse.credit
+                cv_tmp = int(cv_tmp)
+                cour_avg.grade_point = (gp_tmp * cv_tmp)
+                # cour_avg.grade_point = ((cour_avg.course_exam / 25) * crse.credit)
+            else:
+                type_average = 'Not Exists'
+                cour_avg = CourseAverage()
+                cour_avg.total = int(scores)
+                cour_avg.divisor = 1
+                cour_avg.average = int(scores)
+                cour_avg.student = student
+                cour_avg.semester = ca.semester
+                cour_avg.course = crse
+                cour_avg.academic_year = ca.semester.academic_year
+                cour_avg.credit = crse.credit
+                cour_avg.exam_score = 0
+                cour_avg.course_exam = cour_avg.average
+                gp_tmp = (cour_avg.course_exam / 25)
+                cv_tmp = crse.credit
+                cv_tmp = float(cv_tmp)
+                cour_avg.grade_point = (gp_tmp * cv_tmp)
+            mark.student = student
+            mark.course = crse
+            mark.credit = crse.credit
+            mark.user = request.user
+            test_marks_list = Marks.objects.all().filter(
+                ((Q(student=mark.student) & Q(course=mark.course)) & Q(ca=mark.ca)))
+            if test_marks_list.exists():
+                print('Exists')
+                test_marks = list(test_marks_list)
+            else:
+                mark.save()
+                cour_avg.save()
+                # average = Averages()
+
+            print('mrks cores are ')
+            # print(st)
+            continue
+        fatal = 'None'
+        result_list = []
+        result = Marks.objects.all().filter(Q(course=course) & Q(ca=c)).order_by('id')
+        result_list = list(result)
+        crse = get_object_or_404(TeacherCourses, pk=pk)
+        return render(request, 'my_courses/success_registration.html',
+                      {"fatal": fatal, "result_list": result_list, "crse": crse})
+
+    else:
+        courses = get_object_or_404(TeacherCourses, pk=pk)
+        course = courses.course
+        print(course)
+        possible_ca = ContinuousAssessment.objects.all().filter(status=1).order_by('-id')
+        # for pCA in possible_ca:
+        #     print(pCA.mark)
+        possible_exam = Exam.objects.all().filter(status=1).order_by('-id')
+        stus = StudentCourse.objects.all().filter(course=course).order_by('id')
+        return render(request, 'my_courses/register_marks_ca.html',
+                      {"courses": courses, "stus": stus, "possible_ca": possible_ca, "possible_exam": possible_exam})
+
+
+@login_required
+def fill_marks_exam(request, pk):
+    global test_marks_list, cour_avg
+    if request.method == 'POST':
+        c = request.POST.get('exam')
+
+        courses = get_object_or_404(TeacherCourses, pk=pk)
+        course = courses.course
+        stus = StudentCourse.objects.all().filter(course=course).order_by('id')
+        print('Post Received')
+        ct = stus.count()
+        print(ct)
+        course_id = request.POST.get('course_id')
+        score_list = request.POST.getlist('score')
+        student_list = request.POST.getlist('student')
+        print('First score List')
+        print(score_list)
+        print('First student List')
+        print(student_list)
+        stu_scr = zip(score_list, student_list)
+        st = []
+        mrk_list = []
+        for scores, stdts in stu_scr:
+            mark = Marks()
+            # cour_avg = CourseAverage()
+            if scores == '':
+                scores = 0
+            score = scores
+            # print(score)
+            sts = stdts
+            # print(sts)
+            student = get_object_or_404(User, pk=sts)
+            crse = get_object_or_404(Courses, pk=course_id)
+            ex = get_object_or_404(Exam, pk=request.POST.get('exam'))
+            mark.exam = ex
+            mark.semester = ex.semester
+            mark.academic_year = ex.semester.academic_year
+            mark.score = int(scores)
+            test_average = CourseAverage.objects.all().filter(
+                Q(student=student) & Q(course=crse) & Q(semester=ex.semester))
+            if test_average.exists():
+                type_average = 'Exists'
+                cour_avg = get_object_or_404(CourseAverage,
+                                             Q(student=student) & Q(course=crse) & Q(semester=ex.semester))
+                if cour_avg.average is None:
+                    av = 0
+                else:
+                    av = cour_avg.average
+                cour_avg.exam_score = int(scores)
+                cour_avg.course_exam = (cour_avg.exam_score + av)
+                gp_tmp = (cour_avg.course_exam / 25)
+                cv_tmp = crse.credit
+                cv_tmp = int(cv_tmp)
+                cour_avg.grade_point = (gp_tmp * cv_tmp)
+                # cour_avg.grade_point = ((cour_avg.course_exam / 25) * crse.credit)
+            else:
+                type_average = 'Not Exists'
+                cour_avg = CourseAverage()
+                cour_avg.total = 0
+                cour_avg.divisor = 0
+                cour_avg.average = 0
+                cour_avg.student = student
+                cour_avg.semester = ex.semester
+                cour_avg.course = crse
+                cour_avg.academic_year = ex.semester.academic_year
+                cour_avg.credit = crse.credit
+                cour_avg.exam_score = int(scores)
+                cour_avg.course_exam = int(scores)
+                gp_tmp = (cour_avg.course_exam / 25)
+                cv_tmp = crse.credit
+                cv_tmp = float(cv_tmp)
+                cour_avg.grade_point = (gp_tmp * cv_tmp)
+            mark.student = student
+            mark.course = crse
+            mark.credit = crse.credit
+            mark.user = request.user
+            test_marks_list = Marks.objects.all().filter(
+                ((Q(student=mark.student) & Q(course=mark.course)) & Q(exam=mark.exam)))
+            if test_marks_list.exists():
+                print('Exists')
+                test_marks = list(test_marks_list)
+            else:
+                mark.save()
+                cour_avg.save()
+                # average = Averages()
+
+            print('mrks cores are ')
+            # print(st)
+            continue
+        fatal = 'None'
+        result_list = []
+        result = Marks.objects.all().filter(Q(course=course) & Q(exam=c)).order_by('id')
+        result_list = list(result)
+        crse = get_object_or_404(TeacherCourses, pk=pk)
+        return render(request, 'my_courses/success_registration_exam.html',
+                      {"fatal": fatal, "result_list": result_list, "crse": crse})
+
+    else:
+        courses = get_object_or_404(TeacherCourses, pk=pk)
+        course = courses.course
+        print(course)
+        possible_ca = ContinuousAssessment.objects.all().filter(status=1).order_by('-id')
+        # for pCA in possible_ca:
+        #     print(pCA.mark)
         possible_exam = Exam.objects.all().filter(status=1).order_by('-id')
         stus = StudentCourse.objects.all().filter(course=course).order_by('id')
         return render(request, 'my_courses/register_marks.html',
@@ -549,13 +774,29 @@ def final_results_home(request):
             CourseAverage.objects.all().filter(Q(student=request.user) & Q(semester=semester)).aggregate(
                 sum=Sum('credit'))[
                 'sum']
-        credit_earn = Marks.objects.all().filter(
-            Q(student=request.user) & Q(semester=semester) & Q(ca=None) & Q(score__lt=10)).aggregate(sum=Sum('credit'))[
+        total_gp = \
+            CourseAverage.objects.all().filter(
+                Q(student=request.user) & Q(semester=semester) & Q(course_exam__gte=50)).aggregate(
+                sum=Sum('grade_point'))[
+                'sum']
+        print(credit)
+        credit_earn = CourseAverage.objects.all().filter(
+            Q(student=request.user) & Q(semester=semester) & Q(course_exam__gte=50)).aggregate(sum=Sum('credit'))[
             'sum']
-        print(result_exam)
+        print("Total GP")
+        print(total_gp)
+        print("Credit Earn")
+        print(credit_earn)
+        if credit_earn is None:
+            credits_earn = 0
+        else:
+            credits_earn = credit_earn
+        gpa = (total_gp / credits_earn)
         result_list = list(result)
         result_list_exam = list(result_exam)
         final_exam = zip(result_list, result_list_exam)
+        print('GPA is')
+        print(gpa)
         if result.exists():
             query_outcome = 'Found Results'
         else:
@@ -563,7 +804,7 @@ def final_results_home(request):
         return render(request, 'my_results/final_results.html',
                       {"query_outcome": query_outcome, "result_list": result_list, "result_list_exam": result_list_exam,
                        "exams": exams, "semesters": semesters, "final_exam": final_exam, "semester": semester,
-                       "credit": credit, "credit_earn": credit_earn})
+                       "credit": credit, "credit_earn": credit_earn, "gpa": gpa})
     else:
         return render(request, 'my_results/final_results.html', {"exams": exams, "semesters": semesters})
 
@@ -578,18 +819,35 @@ def print_results(request, pk):
     result_list = list(result)
     print(semester)
     credit = \
-        CourseAverage.objects.all().filter(Q(student=request.user) & Q(semester=semester)).aggregate(sum=Sum('credit'))[
+        CourseAverage.objects.all().filter(Q(student=request.user) & Q(semester=semester)).aggregate(
+            sum=Sum('credit'))[
             'sum']
-    credit_earn = \
-        Marks.objects.all().filter(
-            Q(student=request.user) & Q(semester=semester) & Q(ca=None) & Q(score__lt=10)).aggregate(
-            sum=Sum('credit'))['sum']
+    total_gp = \
+        CourseAverage.objects.all().filter(
+            Q(student=request.user) & Q(semester=semester) & Q(course_exam__gte=50)).aggregate(
+            sum=Sum('grade_point'))[
+            'sum']
+    print(credit)
+    credit_earn = CourseAverage.objects.all().filter(
+        Q(student=request.user) & Q(semester=semester) & Q(course_exam__gte=50)).aggregate(sum=Sum('credit'))[
+        'sum']
+    print("Total GP")
+    print(total_gp)
+    print("Credit Earn")
+    print(credit_earn)
+    if credit_earn is None:
+        credits_earn = 0
+    else:
+        credits_earn = credit_earn
+    gpa = (total_gp / credits_earn)
     print(credit)
     print(credit_earn)
     result_list_exam = list(result_exam)
     final_exam = zip(result_list, result_list_exam)
     return render(request, 'my_results/final_results_print.html',
-                  {"final_exam": final_exam, "semester": semester, "credit": credit, "credit_earn": credit_earn})
+                  {"result_list": result_list, "result_list_exam": result_list_exam, "final_exam": final_exam,
+                   "semester": semester,
+                   "credit": credit, "credit_earn": credit_earn, "gpa": gpa})
 
 
 @login_required
@@ -609,7 +867,9 @@ def transcript_test_code(request):
             print(code)
             request.session['code'] = code
             # Generate uniquic code and call twillo function and pass the number to send code as message
-            return render(request, 'my_results/transcript_code_check.html', {"code": code})
+            # return render(request, 'my_results/transcript_code_check.html', {"code": code})
+            acc_yr = AcademicYear.objects.all()
+            return render(request, 'my_results/transcript.html', {"code": code, "acc_yr": acc_yr})
         else:
             msg = 'Invalid Phone Number'
             print(msg)
@@ -646,16 +906,35 @@ def transcript_calculation(request):
     semesters = Semester.objects.all().order_by('-id')
     academic_year = get_object_or_404(AcademicYear, pk=request.POST.get('academic_year'))
     if request.method == 'POST':
-        result = CourseAverage.objects.all().filter(Q(student=request.user) & Q(academic_year=academic_year)).order_by('-course')
-        result_exam = Marks.objects.all().filter(Q(student=request.user) & Q(academic_year=academic_year) & Q(ca=None)).order_by(
+        result = CourseAverage.objects.all().filter(Q(student=request.user) & Q(academic_year=academic_year)).order_by(
+            '-course')
+        result_exam = Marks.objects.all().filter(
+            Q(student=request.user) & Q(academic_year=academic_year) & Q(ca=None)).order_by(
             '-course')
         credit = \
             CourseAverage.objects.all().filter(Q(student=request.user) & Q(academic_year=academic_year)).aggregate(
                 sum=Sum('credit'))[
                 'sum']
-        credit_earn = Marks.objects.all().filter(
-            Q(student=request.user) & Q(academic_year=academic_year) & Q(ca=None) & Q(score__lt=10)).aggregate(sum=Sum('credit'))[
+        total_gp = \
+            CourseAverage.objects.all().filter(
+                Q(student=request.user) & Q(academic_year=academic_year) & Q(course_exam__gte=50)).aggregate(
+                sum=Sum('grade_point'))[
+                'sum']
+        print(credit)
+        credit_earn = CourseAverage.objects.all().filter(
+            Q(student=request.user) & Q(academic_year=academic_year) & Q(course_exam__gte=50)).aggregate(
+            sum=Sum('credit'))[
             'sum']
+        print("Total GP")
+        print(total_gp)
+        print("Credit Earn")
+        print(credit_earn)
+        if credit_earn is None:
+            credits_earn = 0
+        else:
+            credits_earn = credit_earn
+        gpa = (total_gp / credits_earn)
+
         print(result_exam)
         result_list = list(result)
         result_list_exam = list(result_exam)
@@ -667,7 +946,7 @@ def transcript_calculation(request):
         return render(request, 'my_results/transcript.html',
                       {"query_outcome": query_outcome, "result_list": result_list, "result_list_exam": result_list_exam,
                        "exams": exams, "semesters": semesters, "final_exam": final_exam, "academic_year": academic_year,
-                       "credit": credit, "credit_earn": credit_earn})
+                       "credit": credit, "credit_earn": credit_earn, "gpa": gpa})
     else:
         return render(request, 'my_results/transcript.html', {"exams": exams, "semesters": semesters})
 
@@ -676,26 +955,43 @@ def transcript_calculation(request):
 def print_transcript(request, pk):
     print(pk)
     academic_year = get_object_or_404(AcademicYear, pk=pk)
-    result = CourseAverage.objects.all().filter(Q(student=request.user) & Q(academic_year=academic_year)).order_by('-course')
-    result_exam = Marks.objects.all().filter(Q(student=request.user) & Q(academic_year=academic_year) & Q(ca=None)).order_by(
+    result = CourseAverage.objects.all().filter(Q(student=request.user) & Q(academic_year=academic_year)).order_by(
+        '-course')
+    result_exam = Marks.objects.all().filter(
+        Q(student=request.user) & Q(academic_year=academic_year) & Q(ca=None)).order_by(
         '-course')
     result_list = list(result)
     print(academic_year)
     credit = \
-        CourseAverage.objects.all().filter(Q(student=request.user) & Q(academic_year=academic_year)).aggregate(sum=Sum('credit'))[
+        CourseAverage.objects.all().filter(Q(student=request.user) & Q(academic_year=academic_year)).aggregate(
+            sum=Sum('credit'))[
             'sum']
-    credit_earn = \
-        Marks.objects.all().filter(
-            Q(student=request.user) & Q(academic_year=academic_year) & Q(ca=None) & Q(score__lt=10)).aggregate(
-            sum=Sum('credit'))['sum']
+    total_gp = \
+        CourseAverage.objects.all().filter(
+            Q(student=request.user) & Q(academic_year=academic_year) & Q(course_exam__gte=50)).aggregate(
+            sum=Sum('grade_point'))[
+            'sum']
+    print(credit)
+    credit_earn = CourseAverage.objects.all().filter(
+        Q(student=request.user) & Q(academic_year=academic_year) & Q(course_exam__gte=50)).aggregate(sum=Sum('credit'))[
+        'sum']
+    print("Total GP")
+    print(total_gp)
+    print("Credit Earn")
+    print(credit_earn)
+    if credit_earn is None:
+        credits_earn = 0
+    else:
+        credits_earn = credit_earn
+    gpa = (total_gp / credits_earn)
     print(credit)
     print(credit_earn)
     result_list_exam = list(result_exam)
     final_exam = zip(result_list, result_list_exam)
     return render(request, 'my_results/final_transcript_print.html',
-                  {"final_exam": final_exam, "academic_year": academic_year, "credit": credit, "credit_earn": credit_earn})
-
-
+                  {"result_list": result_list, "result_list_exam": result_list_exam,
+                   "final_exam": final_exam, "academic_year": academic_year,
+                   "credit": credit, "credit_earn": credit_earn, "gpa": gpa})
 
 
 # API VIEWS
@@ -718,8 +1014,15 @@ def my_drf_login(request):
     urs = get_object_or_404(User, pk=token.user_id)
     return Response(
         {"token": token.key, "user_id": token.user_id, "Username": urs.username, "Name": urs.get_full_name(),
+         "birthDate": urs.student.birthDate,
          "role": urs.student.role, "department": urs.student.department.department_name,
-         "program": urs.student.degree_programm, "picture": urs.student.picture.url})
+         "matriculation": urs.student.matriculation,
+         "program": urs.student.degree_programm, "nationality": urs.student.nationality,
+         "picture": urs.student.picture.url, "phone": urs.student.phone, "address": urs.student.address,
+         "birthPlace": urs.student.birthPlace, "marital_status": urs.student.marital_status,
+         "gender": urs.student.gender,
+         "region": urs.student.region, "admited_on": urs.date_joined, "email": urs.email
+         })
 
 
 # {"token": token.key, "user_id": token.user_id, "Username": urs.username, "Name": urs.get_full_name(),
@@ -741,11 +1044,18 @@ def my_drf_logout(request):
 # Authentication API Views Ends
 
 
-@api_view(["GET"])
+@api_view(["POST"])
 def get_all_courses(self):
     subject = Courses.objects.all().order_by('-id')
     serializer = CoursesSerializer(subject, many=True)
     return Response({"courses": serializer.data})
+
+
+# @api_view(["GET"])
+# def get_all_courses(self):
+#     subject = Courses.objects.all().order_by('-id')
+#     serializer = CoursesSerializer(subject, many=True)
+#     return Response({"courses": serializer.data})
 
 
 @api_view(["POST"])
@@ -756,8 +1066,10 @@ def my_major_courses(request):
     print(token.key)
     urs = get_object_or_404(User, pk=tken)
     register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Major').order_by('-id')
+    # arg = {"course_name": register_courses.course.course, "course_code": register_courses.course.code,"course_credit": register_courses.course.credit}
     serializer = StudentCourseSerializer(register_courses, many=True)
     return Response({"major": serializer.data})
+    # return Response({"major": arg})
     # return JsonResponse(serializer.data, safe=False)
 
 
@@ -810,7 +1122,7 @@ def save_major_courses(request):
     if register_courses.exists():
         register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Major').order_by('-id')
         serializer = StudentCourseSerializer(register_courses, many=True)
-        return Response({"major": serializer.data, "message": "Cant`t Register the same course twice"})
+        return Response({"major": serializer.data, "error_msg": "Cant`t Register the same course twice"})
     else:
         stu_crse = StudentCourse()
         stu_crse.student = urs
@@ -819,7 +1131,7 @@ def save_major_courses(request):
         stu_crse.save()
     register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Major').order_by('-id')
     serializer = StudentCourseSerializer(register_courses, many=True)
-    return Response({"major": serializer.data, "message": "New Major Course Registered"})
+    return Response({"major": serializer.data, "success_msg": "New Major Course Registered"})
 
 
 @api_view(["POST"])
@@ -835,7 +1147,7 @@ def save_minor_courses(request):
     if register_courses.exists():
         register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Minor').order_by('-id')
         serializer = StudentCourseSerializer(register_courses, many=True)
-        return Response({"major": serializer.data, "message": "Cant`t Register the same course twice"})
+        return Response({"minor": serializer.data, "error_msg": "Cant`t Register the same course twice"})
     else:
         stu_crse = StudentCourse()
         stu_crse.student = urs
@@ -844,7 +1156,7 @@ def save_minor_courses(request):
         stu_crse.save()
     register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Minor').order_by('-id')
     serializer = StudentCourseSerializer(register_courses, many=True)
-    return Response({"major": serializer.data, "message": "New Minor Course Registered"})
+    return Response({"minor": serializer.data, "success_msg": "New Minor Course Registered"})
 
 
 @api_view(["POST"])
@@ -860,7 +1172,7 @@ def save_elective_courses(request):
     if register_courses.exists():
         register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Elective').order_by('-id')
         serializer = StudentCourseSerializer(register_courses, many=True)
-        return Response({"major": serializer.data, "message": "Cant`t Register the same course twice"})
+        return Response({"elective": serializer.data, "error_msg": "Cant`t Register the same course twice"})
     else:
         stu_crse = StudentCourse()
         stu_crse.student = urs
@@ -869,7 +1181,7 @@ def save_elective_courses(request):
         stu_crse.save()
     register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Elective').order_by('-id')
     serializer = StudentCourseSerializer(register_courses, many=True)
-    return Response({"major": serializer.data, "message": "New Elective Course Registered"})
+    return Response({"elective": serializer.data, "success_msg": "New Elective Course Registered"})
 
 
 @api_view(["POST"])
@@ -885,7 +1197,7 @@ def save_required_courses(request):
     if register_courses.exists():
         register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Required').order_by('-id')
         serializer = StudentCourseSerializer(register_courses, many=True)
-        return Response({"major": serializer.data, "message": "Cant`t Register the same course twice"})
+        return Response({"required": serializer.data, "error_msg": "Cant`t Register the same course twice"})
     else:
         stu_crse = StudentCourse()
         stu_crse.student = urs
@@ -894,7 +1206,7 @@ def save_required_courses(request):
         stu_crse.save()
     register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Required').order_by('-id')
     serializer = StudentCourseSerializer(register_courses, many=True)
-    return Response({"major": serializer.data, "message": "New Required Course Registered"})
+    return Response({"required": serializer.data, "success_msg": "New Required Course Registered"})
 
 
 @api_view(["POST"])
@@ -938,7 +1250,7 @@ def drop_minor_courses(request):
     urs = get_object_or_404(User, pk=tken)
     register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Minor').order_by('-id')
     serializer = StudentCourseSerializer(register_courses, many=True)
-    return Response({"message": "Minor Course dropped", "major": serializer.data})
+    return Response({"message": "Minor Course dropped", "minor": serializer.data})
 
 
 @api_view(["POST"])
@@ -954,7 +1266,7 @@ def drop_elective_courses(request):
     urs = get_object_or_404(User, pk=tken)
     register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Elective').order_by('-id')
     serializer = StudentCourseSerializer(register_courses, many=True)
-    return Response({"message": "Minor Elective dropped", "major": serializer.data})
+    return Response({"message": "Minor Elective dropped", "elective": serializer.data})
 
 
 @api_view(["POST"])
@@ -970,4 +1282,143 @@ def drop_required_courses(request):
     urs = get_object_or_404(User, pk=tken)
     register_courses = StudentCourse.objects.all().filter(student=urs, type_course='Required').order_by('-id')
     serializer = StudentCourseSerializer(register_courses, many=True)
-    return Response({"message": "Minor Required dropped", "major": serializer.data})
+    return Response({"message": "Minor Required dropped", "required": serializer.data})
+
+
+@api_view(["POST"])
+def ca_results_home_drf(request):
+    reply = ''
+    ca = request.data.get('ca')
+    user = request.data.get('user')
+    urs = get_object_or_404(User, pk=user)
+    result = Marks.objects.all().filter(Q(student=urs) & Q(ca=ca)).order_by('id')
+    cas = ContinuousAssessment.objects.all().order_by('-id')
+    result_list = list(result)
+    if result is None:
+        reply = 'Results Found'
+    serializer = MarksSerializer(result_list, many=True)
+    return Response({"reply": reply, "ca_results": serializer.data})
+
+
+@api_view(["POST"])
+def ca_s(request):
+    cas = ContinuousAssessment.objects.all().order_by('-id')
+    serializer = ContinuousAssessmentSerializer(cas, many=True)
+    return Response({"ca": serializer.data})
+
+
+@api_view(["POST"])
+def exam_s(request):
+    exam = Exam.objects.all().order_by('-id')
+    serializer = ExamSerializer(exam, many=True)
+    return Response({"exam": serializer.data})
+
+
+@api_view(["POST"])
+def exam_results_home_drf(request):
+    exam = request.data.get('exam')
+    user = request.data.get('user')
+    urs = get_object_or_404(User, pk=user)
+    result = Marks.objects.all().filter(Q(student=urs) & Q(exam=exam)).order_by('id')
+    result_list = list(result)
+    if result.exists():
+        query_outcome = 'Results Found'
+    else:
+        query_outcome = 'No Results'
+    serializer = MarksSerializer(result_list, many=True)
+    return Response({"query_outcome": query_outcome, "exam_results": serializer.data})
+
+
+@api_view(["POST"])
+def semester_s(request):
+    exam = Semester.objects.all().order_by('-id')
+    serializer = SemesterSerializer(exam, many=True)
+    return Response({"semester": serializer.data})
+
+
+@api_view(["POST"])
+def academic_year_s(request):
+    exam = AcademicYear.objects.all().order_by('-id')
+    serializer = AcademicYearSerializer(exam, many=True)
+    return Response({"acc_year": serializer.data})
+
+
+@api_view(["POST"])
+def semester_results(request):
+    query_outcome = ''
+    semester = request.data.get('semester')
+    user = request.data.get('user')
+    urs = get_object_or_404(User, pk=user)
+    semester = get_object_or_404(Semester, pk=semester)
+    result = CourseAverage.objects.all().filter(Q(student=urs) & Q(semester=semester)).order_by('-course')
+    credit = \
+        CourseAverage.objects.all().filter(Q(student=urs) & Q(semester=semester)).aggregate(
+            sum=Sum('credit'))[
+            'sum']
+    total_gp = \
+        CourseAverage.objects.all().filter(
+            Q(student=urs) & Q(semester=semester) & Q(course_exam__gte=50)).aggregate(
+            sum=Sum('grade_point'))[
+            'sum']
+    print(credit)
+    credit_earn = CourseAverage.objects.all().filter(
+        Q(student=urs) & Q(semester=semester) & Q(course_exam__gte=50)).aggregate(sum=Sum('credit'))[
+        'sum']
+    print("Total GP")
+    print(total_gp)
+    print("Credit Earn")
+    print(credit_earn)
+    if credit_earn is None:
+        credits_earn = 0
+    else:
+        credits_earn = credit_earn
+    gpa = (total_gp / credits_earn)
+    print('GPA is')
+    print(gpa)
+    if result.exists():
+        query_outcome = 'Found Results'
+    else:
+        query_outcome = 'No Results'
+    serializer = CourseAverageSerializer(result, many=True)
+    return Response({"query_outcome": query_outcome, "semester_results": serializer.data, "credit": credit, "credit_earn": credit_earn, "gpa": gpa})
+
+
+@api_view(["POST"])
+def my_transcript(request):
+    query_outcome = ''
+    user = request.data.get('user')
+    urs = get_object_or_404(User, pk=user)
+    academic_year = get_object_or_404(AcademicYear, pk=request.data.get('academic_year'))
+    result = CourseAverage.objects.all().filter(Q(student=urs) & Q(academic_year=academic_year)).order_by(
+        '-course')
+    credit = \
+        CourseAverage.objects.all().filter(Q(student=urs) & Q(academic_year=academic_year)).aggregate(
+            sum=Sum('credit'))[
+            'sum']
+    total_gp = \
+        CourseAverage.objects.all().filter(
+            Q(student=urs) & Q(academic_year=academic_year) & Q(course_exam__gte=50)).aggregate(
+            sum=Sum('grade_point'))[
+            'sum']
+    print(credit)
+    credit_earn = CourseAverage.objects.all().filter(
+        Q(student=urs) & Q(academic_year=academic_year) & Q(course_exam__gte=50)).aggregate(
+        sum=Sum('credit'))[
+        'sum']
+    print("Total GP")
+    print(total_gp)
+    print("Credit Earn")
+    print(credit_earn)
+    if credit_earn is None:
+        credits_earn = 0
+    else:
+        credits_earn = credit_earn
+    gpa = (total_gp / credits_earn)
+
+    if result.exists():
+        query_outcome = 'Found Results'
+    else:
+        query_outcome = 'No Results'
+    serializer = CourseAverageSerializer(result, many=True)
+    return Response({"query_outcome": query_outcome, "my_transcript": serializer.data, "credit": credit,
+                     "credit_earn": credit_earn, "gpa": gpa})
