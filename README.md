@@ -5,7 +5,7 @@ The project comprises of a Backbone API developed with Django-Rest Framework, a 
 It permits school admins to get connected and: -
 - Register new students as well as updating the information of existing students.
 - Register new Lecturers as well as updating the information of existing lecturers and other staff members.
--Assign courses to lecturers and handle mark corrections.
+- Assign courses to lecturers and handle mark corrections.
 
 ***** BENEFITS TO STUDENTS *****
 It permits students to register for their courses and get results of Continuous Assessments and semester exams in real time. It also permits students to make request for and download their transcripts.
