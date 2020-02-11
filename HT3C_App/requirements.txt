@@ -21,7 +21,7 @@ coreapi-cli==1.0.9
 coreschema==0.0.4
 coverage==4.5.1
 cryptography==2.2.2
-Django==2.0.4
+Django==2.2.10
 django-admin-views==0.8.0
 django-adminlte2==0.3.0
 django-adminplus==0.5
