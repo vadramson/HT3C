@@ -93,7 +93,7 @@ pluggy==0.6.0
 postmarkup==1.2.2
 psycopg2==2.7.4
 pubcontrol==2.4.2
-py==1.5.3
+py==1.10.0
 pyasn1==0.4.2
 pybbm==0.19.0
 pycparser==2.18
