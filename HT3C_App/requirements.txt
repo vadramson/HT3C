@@ -118,7 +118,7 @@ tox==3.0.0
 txaio==2.10.0
 Unidecode==1.0.22
 uritemplate==3.0.0
-urllib3==1.22
+urllib3==1.26.5
 uuid==1.30
 virtualenv==15.2.0
 webencodings==0.5.1
