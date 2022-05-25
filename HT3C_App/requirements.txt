@@ -97,7 +97,7 @@ py==1.5.3
 pyasn1==0.4.2
 pybbm==0.19.0
 pycparser==2.18
-PyJWT==1.6.1
+PyJWT==2.4.0
 PyNaCl==1.2.1
 pyparsing==2.2.0
 pyPdf==1.13
