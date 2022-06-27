@@ -106,7 +106,7 @@ pytils==0.3
 pytz==2018.4
 RapidSMS==0.22.0
 redis==2.10.6
-reportlab==3.4.0
+reportlab==3.5.55
 requests==2.18.4
 six==1.11.0
 sorl-thumbnail==12.4.1
