@@ -86,7 +86,7 @@ olefile==0.45.1
 packaging==17.1
 paramiko==2.4.1
 pbr==4.0.2
-Pillow==5.1.0
+Pillow==9.3.0
 pinax-theme-bootstrap==8.0.1
 pisa==3.0.33
 pluggy==0.6.0
